@@ -1,0 +1,1 @@
+// product name, description, product image, category, price, quantity, 

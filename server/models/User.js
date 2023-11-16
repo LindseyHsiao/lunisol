@@ -1,0 +1,1 @@
+// user model will need to store email, password, array of orders, first name, last name, address, cart
