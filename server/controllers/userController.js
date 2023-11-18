@@ -1,0 +1,1 @@
+// create an exportable object that contains the following methods: createUser, getUser, loginUser. also require the user model
