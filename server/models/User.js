@@ -21,10 +21,10 @@ const userSchema = new Schema(
                 ref: 'Order'
             }
         ],
-        // cart: {
-        //     type: Schema.Types.ObjectId,
-        //     ref: 'Cart'
-        // }
+        cart: {
+            type: Schema.Types.ObjectId,
+            ref: 'Cart'
+        }
 
     }
 );

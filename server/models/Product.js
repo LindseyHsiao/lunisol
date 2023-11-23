@@ -13,9 +13,10 @@ const productSchema = new Schema(
             required: true
         },
         // find out about type
-        // productImage: {
-        //     type: 
-        // }, 
+        productImage: {
+            type: String,
+            required: true
+        }, 
         category: {
             type: Schema.Types.ObjectId,
             ref: 'Category',
@@ -24,6 +25,10 @@ const productSchema = new Schema(
         price: {
             type: Number,
             required: true
+        },
+        stock: {
+            type: Number,
+            default: 0
         }
         
     }

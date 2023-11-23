@@ -1,12 +1,18 @@
 const router = require('express').Router();
+const { getSingleUser, login, createUser, checkout } =  require('../../controllers/userController')
 
-const { getUsers, addUsers, getOneUser, deleteOneUser, updateOneUser } =  require('../controllers/userController')
+const {authMiddleware} =  require('../../utils/auth')
 
-router.route('/users').get(getUsers).post(addUsers)
-router.route('/users/:id').get(getOneUser).delete(deleteOneUser).put(updateOneUser)
+router.route('/').post(createUser)
+router.route('/:id').get(getSingleUser)
+router.route('/login').post(login)
+
+router.route('/orders').post(
+    authMiddleware,
+    checkout
+    )
 
 module.exports = router
 
 
 
-module.exports = router
