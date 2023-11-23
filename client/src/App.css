@@ -1,42 +1,103 @@
-#root {
-  max-width: 1280px;
-  margin: 0 auto;
-  padding: 2rem;
+* {
+  box-sizing: border-box;
+}
+body {
+  margin: 0;
+}
+
+.header {
+background-color: #A7A376;
+display: flex;
+flex-direction: column;
+align-items: center;
+}
+.header-logo {
+  height: 5rem;
+  width: 5rem;
+}
+
+ul {
+  list-style-type: none;
+  display: flex;
+  padding: 0;
+  margin: 0;
+  gap: 1rem;
+}
+nav {
+  background-color: #F6F1DF;
+  display: flex; 
+  justify-content: space-between;
+  align-items: center;
+  height: 3rem;
+}
+.nav-left {
+  padding-left: 1rem;
+}
+.nav-right {
+  padding-right: 1rem;
+}
+
+.home {
+  background-color: #A7A376;
+  display: flex;
+  flex-direction: column;
+}
+.home-main {
+  display: flex;
+  
+}
+.home-left {
+  padding-left: 7%;
+  padding-top: 15%;
+}
+button {
+  background-color: #A7A376;
+  color:#F6F1DF;
+  padding: 10px 24px;
+  border-radius: 20px;
+  border-color: #F6F1DF;
+  border-style: solid;
+  font-size: 16px;
   text-align: center;
 }
-
-.logo {
-  height: 6em;
-  padding: 1.5em;
-  will-change: filter;
-  transition: filter 300ms;
-}
-.logo:hover {
-  filter: drop-shadow(0 0 2em #646cffaa);
-}
-.logo.react:hover {
-  filter: drop-shadow(0 0 2em #61dafbaa);
+.home-logo {
+  width: 100%
 }
 
-@keyframes logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+.home-icons {
+  display: flex;
+  gap: 1rem;
+  /* align-items: center; */
+  justify-content: center;
+  margin: 1rem;
 }
-
-@media (prefers-reduced-motion: no-preference) {
-  a:nth-of-type(2) .logo {
-    animation: logo-spin infinite 20s linear;
-  }
+.about-div {
+  display: flex;
+  background-color: #F6F1DF;
+  
 }
-
-.card {
-  padding: 2em;
+/* .about-img {
+  
+} */
+.alexa-heart {
+  height: 1000px;
 }
-
-.read-the-docs {
-  color: #888;
+.about-text {
+  padding-left: 7%;
+  padding-top: 15%;
+}
+.products {
+  display: flex;
+  /* justify-content: space-around; */
+  align-items: center;
+}
+.our-products {
+  display: flex;
+}
+.product-text {
+  width: 50%;
+  padding: 5%;
+}
+.product-img {
+  height: 200px;
 }
