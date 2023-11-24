@@ -80,7 +80,7 @@ button {
   
 } */
 .alexa-heart {
-  height: 1000px;
+  height: 700px;
 }
 .about-text {
   padding-left: 7%;
@@ -88,11 +88,19 @@ button {
 }
 .products {
   display: flex;
-  /* justify-content: space-around; */
+  justify-content: space-between;
+  align-items: center;
+}
+.single-product {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
   align-items: center;
 }
 .our-products {
   display: flex;
+  margin-top: 50px;
+  margin-bottom: 50px;
 }
 .product-text {
   width: 50%;
@@ -100,4 +108,57 @@ button {
 }
 .product-img {
   height: 200px;
+}
+
+.story {
+  background-color: #F6F1DF;
+}
+.story-button {
+  background-color: #F6F1DF;
+  color: #A7A376;
+  border-color: #A7A376;
+}
+.journey-quote {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin: 200px;
+}
+.journey-quote-words {
+  color: #F6F1DF;
+  font-size: xx-large;
+}
+.journey-name {
+  border-top: solid black;
+  padding-top: 100px;
+}
+.promo-div {
+  background-image: url('../src/assets/promo.jpeg');
+  background-position-x: center;
+  background-size: cover;
+  background-repeat: no-repeat;
+} 
+.promo{
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+.promo-img {
+  height: 5rem;
+  width: 5rem;
+}
+.essentials-text {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-end;
+  padding-right: 50px;
+  margin-top:400px;
+}
+.essentials-text h3 {
+  color: #F6F1DF;
+  font-size: xx-large;
+
+}
+.essentials-text p {
+  color: #F6F1DF;
 }

@@ -2,6 +2,7 @@ import largeYellowLogo from '../assets/largeYellowLogo.png'
 import iconIG from '../assets/icon-instagram.svg'
 import iconFacebook from '../assets/icon-facebook.svg'
 import alexaHeart from '../assets/alexaHeart.jpeg'
+import smallLogo from '../assets/smallLogo.png'
 
 export default function Home() {
     return (
@@ -42,21 +43,47 @@ export default function Home() {
                     <button>Shop Now</button>
                 </div>
                 <div className='products'>
-                    <div>
+                    <div className='single-product'>
                         <img className='product-img' src={largeYellowLogo} alt="" />
                         <h4>Product Name</h4>
                     </div>
-                    <div>
+                    <div className='single-product'>
                         <img className='product-img' src={largeYellowLogo} alt="" />
                         <h4>Product Name</h4>
                     </div>
-                    <div>
+                    <div className='single-product'>
                         <img className='product-img' src={largeYellowLogo} alt="" />
                         <h4>Product Name</h4>
                     </div>
                 </div>
-
             </div>
+
+            <div className='home-main story'>
+                <div className='home-left'>
+                    <h2>Our Story</h2>
+                    <p>We aim to re-introduce natural healing by empowering individuals to prioritize their health and wellness  through the sharing of all-natural products and knowledge that supports this journey</p>
+                    <button className='story-button'>Read More</button>
+                </div>
+                <div>
+                    <img className='home-logo' src={largeYellowLogo} alt="lunisol icon" />
+                </div>
+            </div>
+            <div className='journey-quote'>
+                <h3 className='journey-quote-words'>"Your Journey. Your wellness. Our passion."</h3>
+                <h4 className='journey-name'>Alexa Villamizar, Founder</h4>
+            </div>
+
+            <div className='promo-div'>
+                <div className='promo'>
+                    <img className='promo-img' src={smallLogo} alt="lunisol logo" />
+                    <h4>Lunisol Wellness</h4>
+                </div>
+                <div className='essentials-text'>
+                    <h3>Essentials for a full life</h3>
+                    <p>Stay healthy and live confidently with Spring & Sky</p>
+                </div>
+            </div>
+
         </section>
 
 
