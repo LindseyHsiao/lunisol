@@ -9,26 +9,27 @@ import Story from './pages/Story'
 
 function App() {
 
-  return(
-    <>
-    <Header/>
-    <Home/>
-    <Shop />
-    <Story />
-    <Footer />
-    </>
-  )
-
-
-  // return (
-  //   <BrowserRouter>
-  //     <Header />
-  //     <Routes>
-
-  //       <Route path="/" element={Home}/>
-  //     </Routes>
-  //   </BrowserRouter>
+  // return(
+  //   <>
+  //   <Header/>
+  //   <Home/>
+  //   <Shop />
+  //   <Story />
+  //   <Footer />
+  //   </>
   // )
+
+
+  return (
+    <BrowserRouter>
+      <Header />
+      <Routes>
+        <Route path="/" element={<Home />}/>
+        <Route path="/shop" element={<Shop />}/>
+        <Route path="/story" element={<Story />}/>
+      </Routes>
+    </BrowserRouter>
+  )
 }
 
 export default App
