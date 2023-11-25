@@ -58,8 +58,8 @@ export default function Home() {
                 </div>
             </div>
 
-            <div className='home-main story'>
-                <div className='home-left'>
+            <div className='home-story-div'>
+                <div className='home-story-left'>
                     <h2>Our Story</h2>
                     <p>We aim to re-introduce natural healing by empowering individuals to prioritize their health and wellness  through the sharing of all-natural products and knowledge that supports this journey</p>
                     <button className='story-button'>Read More</button>
@@ -69,7 +69,7 @@ export default function Home() {
                 </div>
             </div>
             <div className='journey-quote'>
-                <h3 className='journey-quote-words'>"Your Journey. Your wellness. Our passion."</h3>
+                <h3 className='journey-quote-words'>"Your Journey. Your wellness. <br /> Our passion."</h3>
                 <h4 className='journey-name'>Alexa Villamizar, Founder</h4>
             </div>
 
@@ -79,7 +79,7 @@ export default function Home() {
                     <h4>Lunisol Wellness</h4>
                 </div>
                 <div className='essentials-text'>
-                    <h3>Essentials for a full life</h3>
+                    <h3>Essentials for a <br />full life</h3>
                     <p>Stay healthy and live confidently with Spring & Sky</p>
                 </div>
             </div>

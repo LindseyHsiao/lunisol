@@ -15,7 +15,7 @@ export default function Header() {
                     <li>contact</li>
                 </ul>
                 <ul className='nav-right'>
-                    <li>search</li>
+                    <li><input type='text' placeholder='Search'></input></li>
                     <li>shopping cart icon</li>
                 </ul>
             </nav>
