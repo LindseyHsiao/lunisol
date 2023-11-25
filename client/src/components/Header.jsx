@@ -17,9 +17,10 @@ export default function Header() {
                 <div className='dropdown nav-item'>
                         <p>Shop</p>
                         <div className="dropdownOptions">
-                            <Link to="/story">Our Story</Link>
-                            <Link to="#">Our Values</Link>
-                            <Link to="#">Our Values</Link>
+                            <Link to="/shop">All</Link>
+                            <Link to="#">Face</Link>
+                            <Link to="#">Body</Link>
+                            <Link to="#">Seasonal</Link>
                         </div>
                     </div>
 
@@ -28,15 +29,15 @@ export default function Header() {
                         <p>About</p>
                         <div className="dropdownOptions">
                             <Link to="/story">Our Story</Link>
-                            <Link to="#">Our Values</Link>
+                            <Link to="/ourvalues">Our Values</Link>
                         </div>
                     </div>
 
                     <div className='dropdown nav-item'>
                         <p>Contact</p>
                         <div className="dropdownOptions">
-                            <Link to="/story">FAQ</Link>
-                            <Link to="#">Stay in Touch</Link>
+                            <Link to="/contact">Stay in Touch</Link>
+                            <Link to="#">FAQ</Link>
                         </div>
                     </div>
 
