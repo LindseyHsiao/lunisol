@@ -59,7 +59,8 @@ nav a {
   display: flex;
   align-items: center;
 }
-.nav-item{
+
+.nav-item {
   padding: 0 10px;
 }
 
@@ -168,6 +169,7 @@ button {
   display: flex;
   /* justify-content: space-between; */
   align-items: center;
+  gap: 1rem
 }
 
 .single-product {
@@ -272,11 +274,23 @@ button {
   padding-bottom: 50px;
 }
 
+.shop-nav {
+  display: flex;
+  flex-direction: column;
+  padding-bottom: 5%;
+}
+
 .shop {
   display: flex;
   justify-content: center;
   margin-top: 5%;
-  margin-bottom: 5%;
+  margin-bottom: 1%;
+}
+
+.shop-nav-options {
+  display: flex;
+  justify-content: center;
+  gap: 1rem;
 }
 
 .shop-items {
@@ -414,10 +428,57 @@ button {
 
 .story-cont-last {
   display: flex;
-
-
 }
 
 .story-cont-p-last-logo p {
   text-align: center;
+}
+
+.our-values-section {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding-top: 5%;
+}
+
+.values-dropdown-single {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  align-items: center;
+  position: relative;
+}
+.icon-and-category {
+  display: flex;
+  align-items: center;
+
+}
+.values-icon {
+  display: flex;
+  justify-content: end;
+  padding-right: 1rem;
+}
+
+.values-icon-down-arrow {
+  display: flex;
+  justify-content: end;
+  padding-right: 1rem;
+}
+.values-dropdown-info {
+  
+  position: absolute;
+  left: 0;
+  top: calc(100% + .25rem);
+  background-color: #A7A376;
+  padding: .75rem;
+  border-radius: .25rem;
+  box-shadow: 0 2px 5px 0 rgba(0, 0, 0, .1);
+  opacity: 0;
+  transform: translateX(200px);
+  transition: opacity 150ms ease-in-out;
+  
+}
+
+.values-dropdown-single > .values-icon-down-arrow:hover + .values-dropdown-info {
+  opacity: 1;
+  
 }

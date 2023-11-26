@@ -14,7 +14,7 @@ export default function Header() {
             <div className='nav-container'>
                 <nav className='nav-left'>
 
-                <div className='dropdown nav-item'>
+                    <div className='dropdown nav-item'>
                         <p>Shop</p>
                         <div className="dropdownOptions">
                             <Link to="/shop">All</Link>
@@ -48,7 +48,7 @@ export default function Header() {
                     <input type='text' placeholder='Search' className='nav-item'></input>
                     <a href='#' className='nav-item'>
                         <MdOutlineShoppingBag />
-                        </a>
+                    </a>
                 </nav>
             </div>
         </header>
