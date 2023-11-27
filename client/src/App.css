@@ -482,3 +482,73 @@ button {
   opacity: 1;
   
 }
+.contact {
+  display: flex;
+  justify-content: space-around;
+  padding-top: 5%;
+}
+.stay-in-touch {
+  display: flex;
+  flex-direction: column;
+}
+.contact-img {
+  width: 300px;
+}
+.faq {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding-top: 5%;
+}
+.product-faq {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+.faq-question {
+  display: flex;
+  align-items: center;
+  height: 2rem;
+}
+.single-product-page {
+  display: flex;
+  justify-content: space-around;
+  padding-top: 5%;
+  padding-bottom: 5%;
+}
+.single-product-img img{
+  height: auto;
+  width: 20rem;
+  margin-bottom: 1rem;
+}
+.single-product-shots {
+  width: 20rem;
+  display: flex;
+  justify-content: space-between;
+}
+.single-product-shots img {
+  width: 6rem;
+  height: 6rem;
+}
+.quantity {
+  display: flex;
+  background-color: #A7A376;
+  justify-content: space-around;
+  align-items: center;
+  width: 50%;
+  height: 2rem;
+  margin-bottom: 1rem;
+}
+.product-dropdown-how-to {
+  color: #A7A376;
+  padding-top: 1rem;
+}
+.you-may-also-like {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+.footer {
+  background-color: #A7A376;
+  height: 5rem;
+}
