@@ -1,1 +1,12 @@
+@font-face {
+    font-family: "Bodoni";
+    src: local('Bodoni'),
+      url('./assets/fonts/BodoniflfBolditalic-K7dD (1).ttf');
+  }
 
+  h2 {
+    font-family: 'Bodoni';
+    font-size: 60px;
+    margin-bottom: 0;
+
+  }

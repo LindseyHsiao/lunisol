@@ -9,7 +9,7 @@ export default function Home() {
         <section className='home'>
             <div className='home-main'>
                 <div className='home-left'>
-                    <h2>Healing starts here</h2>
+                    <h2>Healing <br/>starts here</h2>
                     <p>We aim to re-introduce natural healing by empowering individuals to prioritize their health and wellness  through the sharing of all-natural products and knowledge that supports this journey</p>
                     <button>Shop Now</button>
                 </div>
@@ -69,7 +69,7 @@ export default function Home() {
                 </div>
             </div>
             <div className='journey-quote'>
-                <h3 className='journey-quote-words'>"Your Journey. Your wellness. <br /> Our passion."</h3>
+                <h3 className='journey-quote-words'>"Your Journey. <br />Your wellness. <br /> Our passion."</h3>
                 <h4 className='journey-name'>Alexa Villamizar, Founder</h4>
             </div>
 

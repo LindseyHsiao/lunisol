@@ -6,8 +6,6 @@ body {
   margin: 0;
 }
 
-
-
 .logo-container {
   background-color: #A7A376;
   display: flex;
@@ -76,6 +74,7 @@ nav a {
   background-color: #F6F1DF;
 }
 
+
 .dropdown p {
   cursor: pointer;
 
@@ -91,7 +90,7 @@ nav a {
 
 
 .dropdownOptions a {
-  text-align: center;
+  text-align: left;
   display: block;
   padding: 5px;
   padding: 15px 10px;
@@ -101,7 +100,9 @@ nav a {
 }
 
 .dropdownOptions a:hover {
-  background-color: gray;
+  /* background-color: gray; */
+  text-decoration: underline gray;
+  transition: 150ms;
 }
 
 .home {
@@ -121,6 +122,9 @@ nav a {
   padding-top: 15%;
   color: #F6F1DF;
 }
+/* .home-left h2 {
+  margin-bottom: 0;
+} */
 
 button {
   background-color: #A7A376;
@@ -550,5 +554,5 @@ button {
 }
 .footer {
   background-color: #A7A376;
-  height: 5rem;
+  height:fit-content
 }
