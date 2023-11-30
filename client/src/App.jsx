@@ -8,6 +8,7 @@ import Story from './pages/Story'
 import Contact from './pages/Contact'
 import OurValues from './pages/OurValues'
 import SingleProduct from './pages/SingleProduct'
+import Login from './pages/Login'
 
 
 function App() {
@@ -24,6 +25,7 @@ function App() {
         <Route path="/contact" element={<Contact />}/>
         <Route path="/ourvalues" element={<OurValues />}/>
         <Route path="/singleproduct" element={<SingleProduct />}/>
+        <Route path="/login" element={<Login />}/>
       </Routes>
       <Footer />
     </BrowserRouter>

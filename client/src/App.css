@@ -46,14 +46,14 @@ nav a {
 }
 
 .nav-left {
-  padding-left: 1rem;
+  padding-left: 4rem;
   display: flex;
   align-items: center;
   justify-content: space-around;
 }
 
 .nav-right {
-  padding-right: 1rem;
+  padding-right: 4rem;
   display: flex;
   align-items: center;
 }

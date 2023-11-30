@@ -3,11 +3,14 @@ import { Link } from 'react-router-dom'
 import { MdOutlineShoppingBag } from "react-icons/md";
 import { motion } from 'framer-motion'
 import { useState } from "react";
+import { FaUserCircle } from "react-icons/fa";
+import Auth from '../utils/auth'
 
 export default function Header() {
     const [hoverShop, setHoverShop] = useState(false)
     const [hoverAbout, setHoverAbout] = useState(false)
     const [hoverContact, setHoverContact] = useState(false)
+    const [hoverUser, setHoverUser] = useState(false)
 
     const toggleHoverShop = () => {
         setHoverShop(!hoverShop)
@@ -18,37 +21,25 @@ export default function Header() {
     const toggleHoverContact = () => {
         setHoverContact(!hoverContact)
     }
+    const toggleHoverUser = () => {
+        setHoverUser(!hoverUser)
+    }
 
 
-    const menuAnimate = {
+    const variantUserIcon = {
         enter: {
-            // opacity: 1, 
-            // rotateX: 0,
-            // transition: {
-            //     duration: 0.3
-            // },
-            // display: 'block'
-            scale: 1,
-            transition: {
-                type: 'spring',
-                duration: 0.4,
-                delayChildren: 0.2,
-                staggerChildren: 0.05
-            },
+            opacity: 1,
+            y: 0,
+            display: 'block'
         },
         exit: {
-            // opacity: 0,
-            // rotateX: -15,
-            // transition: {
-            //     duration: 0.3,
-            //     delay: 0.1
-            // },
-            // transitionEnd: {
-            //     display: 'none'
-            // }
-            scale: 0,
+            opacity: 0,
+            y: -5,
             transition: {
-                delay: 0.15
+                duration: 0.3
+            },
+            transitionEnd: {
+                display: 'none'
             }
         }
     }
@@ -82,12 +73,12 @@ export default function Header() {
                 <nav className='nav-left'>
 
                     <motion.div
-                        onHoverStart={toggleHoverShop} 
-                        onHoverEnd={toggleHoverShop} 
+                        onHoverStart={toggleHoverShop}
+                        onHoverEnd={toggleHoverShop}
                         className='dropdown nav-item'
                     >
                         <p
-                          
+
                         >Shop</p>
                         <motion.nav
                             className="dropdownOptions"
@@ -104,8 +95,8 @@ export default function Header() {
 
 
                     <motion.div
-                        onHoverStart={toggleHoverAbout} 
-                        onHoverEnd={toggleHoverAbout} 
+                        onHoverStart={toggleHoverAbout}
+                        onHoverEnd={toggleHoverAbout}
                         className='dropdown nav-item'
                     >
                         <p>About</p>
@@ -121,8 +112,8 @@ export default function Header() {
                     </motion.div>
 
                     <motion.div
-                        onHoverStart={toggleHoverContact} 
-                        onHoverEnd={toggleHoverContact} 
+                        onHoverStart={toggleHoverContact}
+                        onHoverEnd={toggleHoverContact}
                         className='dropdown nav-item'
                     >
                         <p>Contact</p>
@@ -137,14 +128,34 @@ export default function Header() {
                         </motion.nav>
                     </motion.div>
 
-                    <Link to='#' className='nav-item'>Blog</Link>
+                    {/* <Link to='#' className='nav-item'>Blog</Link> */}
 
                 </nav>
                 <nav className='nav-right'>
-                    <input type='text' placeholder='Search' className='nav-item'></input>
+                    <input type='text' placeholder='Search' className='nav-item' />
                     <a href='#' className='nav-item'>
                         <MdOutlineShoppingBag />
                     </a>
+
+                    <motion.div
+                        onHoverStart={toggleHoverUser}
+                        onHoverEnd={toggleHoverUser}
+                        className='dropdown nav-item'
+                    >
+                        <FaUserCircle />
+                        <motion.nav
+                            className="dropdownOptions"
+                            initial='exit'
+                            animate={hoverUser ? 'enter' : 'exit'}
+                            variants={variants}
+                        >
+                            <Link to="#">Account</Link>
+                            {Auth.loggedIn() 
+                            ? (<Link onClick={Auth.logout}>Logout</Link>) 
+                            : (<Link to="/login">Login/Signup</Link>)}
+                            
+                        </motion.nav>
+                    </motion.div>
                 </nav>
             </div>
         </header>

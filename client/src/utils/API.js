@@ -19,6 +19,8 @@ export const updateUser = (data) => {
         body: JSON.stringify(data)
     })
 }
+
+
 export const getOneUser = (id) => {
     return fetch(`/api/user/${id}`, {
         method: 'GET',
@@ -34,5 +36,15 @@ export const getAllUsers = () => {
         headers: {
             'Content-Type': 'application/json'
         }
+    })
+}
+
+export const loginUser = (data) => {
+    return fetch('/api/users/login', {
+        method: 'POST',
+        headers: {
+            'Content-Type': 'application/json'
+        },
+        body: JSON.stringify(data)
     })
 }

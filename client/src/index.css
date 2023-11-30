@@ -1,12 +1,21 @@
 @font-face {
     font-family: "Bodoni";
     src: local('Bodoni'),
-      url('./assets/fonts/BodoniflfBolditalic-K7dD (1).ttf');
-  }
+        url('./assets/fonts/BodoniflfBolditalic-K7dD (1).ttf');
+}
 
-  h2 {
+@font-face {
+    font-family: "Garet-Book";
+    src: local('Garet-Book'),
+        url('./assets/fonts/Garet-Book.ttf');
+}
+
+h2 {
     font-family: 'Bodoni';
     font-size: 60px;
     margin-bottom: 0;
 
-  }
+}
+p {
+    font-family: 'Garet-Book';
+}
