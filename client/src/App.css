@@ -4,14 +4,19 @@
 
 body {
   margin: 0;
+  font-family: 'Garet-Book';
 }
 
 .logo-container {
-  background-color: #A7A376;
+  background-color: #AC9C4C;
   display: flex;
   flex-direction: column;
   align-items: center;
   color: #F6F1DF;
+  padding-top: 1em;
+}
+.logo-container h3 {
+  margin-top: 0;
 }
 
 a {
@@ -60,6 +65,8 @@ nav a {
 
 .nav-item {
   padding: 0 10px;
+  border: none;
+  outline: none;
 }
 
 .dropdown {
@@ -96,17 +103,18 @@ nav a {
   padding: 15px 10px;
   text-decoration: none;
   font-size: smaller;
-  width: 100px;
+  width: 200px;
 }
 
 .dropdownOptions a:hover {
-  /* background-color: gray; */
-  text-decoration: underline gray;
+  background-color: #AC9C4C;
+  /* text-decoration: underline gray; */
   transition: 150ms;
+  border-bottom: #A7A376;
 }
 
 .home {
-  background-color: #A7A376;
+  background-color: #AC9C4C;
   display: flex;
   flex-direction: column;
 }
@@ -127,14 +135,15 @@ nav a {
 } */
 
 button {
-  background-color: #A7A376;
+  background-color: #AC9C4C;
   color: #F6F1DF;
   padding: 10px 24px;
   border-radius: 20px;
   border-color: #F6F1DF;
-  border-style: solid;
+  border: 1px solid;
   font-size: 16px;
   text-align: center;
+  font-family: 'Garet-Book';
 }
 
 .home-logo {
@@ -161,12 +170,13 @@ button {
 .alexa-heart {
   height: auto;
   width: 500px;
+  margin-bottom: 0;
 }
 
 .about-text {
   padding-left: 7%;
   padding-top: 15%;
-  color: #A7A376;
+  color: #AC9C4C;
 }
 
 .products {
@@ -191,12 +201,26 @@ button {
 
 .product-text {
   width: 50%;
-  padding: 5%;
+  padding-top: 5%;
+  padding-left: 5%;
+  padding-right: 3%;
   color: #F6F1DF;
 }
 
 .product-img {
   height: 200px;
+}
+.home-products {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding-top: 5%;
+}
+.home-products-button {
+  width: 200px;
+  padding: 20px;
+  border-radius: 30px;
+  margin-bottom: 5%;
 }
 
 .home-story-div {
@@ -208,32 +232,36 @@ button {
 .home-story-left {
   padding-left: 7%;
   padding-top: 15%;
-  color: #A7A376;
+  color: #AC9C4C;
 }
 
 .story-button {
   background-color: #F6F1DF;
-  color: #A7A376;
-  border-color: #A7A376;
+  color: #AC9C4C;
+  border-color: #AC9C4C;
 }
 
 .journey-quote {
   display: flex;
   flex-direction: column;
   align-items: center;
-  margin-top: 150px;
-  margin-bottom: 150px;
+  margin-top: 5%;
+  margin-bottom: 10%;
 }
 
 .journey-quote-words {
-  color: #F6F1DF;
-  font-size: xx-large;
+  color: white;
+  font-size: 50px;
   text-align: center;
+  text-transform: none;
 }
 
 .journey-name {
   border-top: solid black;
   padding-top: 100px;
+  text-transform: uppercase;
+  letter-spacing: .2rem;
+
 }
 
 .promo-div {
@@ -251,6 +279,9 @@ button {
 
 .promo h4 {
   color: #F6F1DF;
+  text-transform: uppercase;
+  margin-top: 0;
+  letter-spacing: .1rem;
 }
 
 .promo-img {
@@ -266,9 +297,8 @@ button {
   margin-top: 300px;
 }
 
-.essentials-text h3 {
+.essentials-text h2 {
   color: #F6F1DF;
-  font-size: xx-large;
   text-align: end;
   margin-bottom: 0px;
 }
@@ -289,12 +319,14 @@ button {
   justify-content: center;
   margin-top: 5%;
   margin-bottom: 1%;
+  color: #A7A376;
 }
 
 .shop-nav-options {
   display: flex;
   justify-content: center;
   gap: 1rem;
+  text-transform: uppercase;
 }
 
 .shop-items {
@@ -303,6 +335,7 @@ button {
   gap: 50px;
   padding-left: 10%;
   padding-right: 10%;
+  font-family: 'Garet-Book';
   /* margin-right: 5%;
   margin-left: 5%; */
 }
@@ -328,12 +361,21 @@ button {
   color: black;
   padding: 10px 24px;
   border-radius: 0px;
-  border-color: black
+  border-color: black;
+  font-family: 'Garet-Book';
 }
 
 .story-section {
-  background-color: #A7A376;
+  background-color: #AC9C4C;
   color: #F6F1DF;
+  padding: 5%;
+}
+.story {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  padding-top: 5%;
 }
 
 .story-title {
@@ -355,11 +397,13 @@ button {
   display: flex;
   justify-content: center;
   text-align: center;
-  padding-top: 5%;
+  padding-top: 1%;
   padding-bottom: 5%;
-  padding-right: 15%;
-  padding-left: 15%;
+  padding-right: 5%;
+  padding-left: 5%;
   line-height: 2;
+  font-family: 'MyHandwriting';
+  font-size: 15px;
 }
 
 .story-images {
@@ -378,7 +422,7 @@ button {
 }
 
 .story-cont-img {
-  width: 50%;
+  /* width: 50%; */
 }
 
 .story-cont-p {
@@ -494,6 +538,9 @@ button {
 .stay-in-touch {
   display: flex;
   flex-direction: column;
+  color: #A7A376;
+  align-items: center;
+
 }
 .contact-img {
   width: 300px;
@@ -503,17 +550,21 @@ button {
   flex-direction: column;
   align-items: center;
   padding-top: 5%;
+  color: #A7A376;
 }
 .product-faq {
   display: flex;
   flex-direction: column;
   align-items: center;
 }
+
 .faq-question {
   display: flex;
   align-items: center;
   height: 2rem;
+  font-family: 'Garet-Book';
 }
+
 .single-product-page {
   display: flex;
   justify-content: space-around;
@@ -554,5 +605,56 @@ button {
 }
 .footer {
   background-color: #A7A376;
-  height:fit-content
+  height:fit-content;
+  display: flex;justify-content: space-between;
+  padding-left: 5%;
+  padding-right: 5%;
+  padding-top: 2%;
 }
+.footer-right {
+  text-align: right;
+}
+
+.login {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  height: vmax;
+  gap: 2rem;
+  padding-top: 2rem;
+  padding-bottom: 4rem;
+}
+.login h2 {
+  color: #A7A376;
+}
+.email {
+  display: flex;
+  flex-direction: column;
+  gap: 2rem;
+  width: 30%;
+}
+.email-input {
+  border: none;
+  outline: none;
+  border-bottom: black solid 1px;
+}
+.sign-up-button {
+  width: 30%;
+}
+
+input::placeholder {
+  font-weight: lighter;
+  opacity: 0.5;
+  color: #A7A376;
+  font-family: 'Garet-Book';
+  font-size: medium;
+}
+input {
+  font-family: 'Garet-Book';
+  
+}
+
+
+
+

@@ -1,7 +1,7 @@
 @font-face {
-    font-family: "Bodoni";
-    src: local('Bodoni'),
-        url('./assets/fonts/BodoniflfBolditalic-K7dD (1).ttf');
+    font-family: "MyHandwriting";
+    src: local('MyHandwriting'),
+        url('./assets/fonts/MyHandwritingFont-Regular 2.ttf');
 }
 
 @font-face {
@@ -10,11 +10,23 @@
         url('./assets/fonts/Garet-Book.ttf');
 }
 
+@font-face {
+    font-family: "Aloevera";
+    src: local('Aloevera'),
+        url('./assets/fonts/Aloevera-OVoWO.ttf');
+}
+
 h2 {
-    font-family: 'Bodoni';
+    font-family: 'Aloevera';
     font-size: 60px;
     margin-bottom: 0;
+    margin-top: 0;
 
+}
+h3 {
+    font-family: 'Garet-Book';
+    text-transform: uppercase;
+    letter-spacing: .2rem;
 }
 p {
     font-family: 'Garet-Book';

@@ -34,16 +34,17 @@ export default function Login() {
 
     return (
         <>
-            <form onSubmit={handleSubmit}>
-                <div>
-                    <label htmlFor="email">Email: </label>
-                    <input type="email" value={formData.email} name="email" onChange={handleChange} />
+            <form onSubmit={handleSubmit} className="login">
+                <h2>Login</h2>
+                <div className="email">
+                    <label htmlFor="email">Email</label>
+                    <input className="email-input" type="email" placeholder="Enter your email" value={formData.email} name="email" onChange={handleChange} />
                 </div>
-                <div>
-                    <label htmlFor="password">Password: </label>
-                    <input type="password" value={formData.password} name="password" onChange={handleChange} />
+                <div className="email">
+                    <label htmlFor="password">Password</label>
+                    <input className="email-input" type="password" placeholder="Enter your password" value={formData.password} name="password" onChange={handleChange} />
                 </div>
-                <button type="submit">Login</button>
+                <button className="sign-up-button" type="submit">Login</button>
             </form>
         </>
     )

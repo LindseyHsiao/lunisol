@@ -6,7 +6,7 @@ export default function Shop() {
         <section>
             <div className='shop-nav'>
                 <div className="shop">
-                    <h1>Shop</h1>
+                    <h2>Shop</h2>
                 </div>
                 <div>
                     <nav className='shop-nav-options'>

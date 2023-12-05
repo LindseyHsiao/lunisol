@@ -1,7 +1,7 @@
 import largeYellowLogo from '../assets/largeYellowLogo.png'
 import iconIG from '../assets/icon-instagram.svg'
 import iconFacebook from '../assets/icon-facebook.svg'
-import alexaHeart from '../assets/alexaHeart.jpeg'
+import alexaHeart from '../assets/alexaHeart.jpg'
 import smallLogo from '../assets/smallLogo.png'
 
 export default function Home() {
@@ -9,7 +9,7 @@ export default function Home() {
         <section className='home'>
             <div className='home-main'>
                 <div className='home-left'>
-                    <h2>Healing <br/>starts here</h2>
+                    <h2>Healing <br />starts here</h2>
                     <p>We aim to re-introduce natural healing by empowering individuals to prioritize their health and wellness  through the sharing of all-natural products and knowledge that supports this journey</p>
                     <button>Shop Now</button>
                 </div>
@@ -28,34 +28,37 @@ export default function Home() {
                 </div>
                 <div className='about-text'>
                     <h2>About</h2>
-                    <h3>Alexa Lunisol Wellness</h3>
-                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Dolorum exercitationem voluptatum doloremque, maxime totam asperiores! Quas earum quae nisi quod cupiditate. Magni cumque, praesentium non veniam animi beatae neque fuga.
-                    </p>
+                    <h3>Alexa, Creator of Lunisol Wellness</h3>
+                    {/* <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Dolorum exercitationem voluptatum doloremque, maxime totam asperiores! Quas earum quae nisi quod cupiditate. Magni cumque, praesentium non veniam animi beatae neque fuga.
+                    </p> */}
+                    <button className='story-button'>Read More</button>
                 </div>
             </div>
 
-            <div className='our-products'>
-                <div className='product-text'>
-                    <h2>Our Products</h2>
-                    <h3>For Everybody</h3>
-                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Dolorum exercitationem voluptatum doloremque, maxime totam asperiores! Quas earum quae nisi quod cupiditate. Magni cumque, praesentium non veniam animi beatae neque fuga.
-                    </p>
-                    <button>Shop Now</button>
+            <div className='home-products'>
+                <div className='our-products'>
+                    <div className='product-text'>
+                        <h2>Our Products</h2>
+                        <h3>For Everybody</h3>
+                        <p>Lunisol Wellness offers a collection of small-batch, handcrafted personal care products that are non-toxic and all-natural.</p>
+
+                    </div>
+                    <div className='products'>
+                        <div className='single-product'>
+                            <img className='product-img' src={largeYellowLogo} alt="" />
+                            <h4>Body Care</h4>
+                        </div>
+                        <div className='single-product'>
+                            <img className='product-img' src={largeYellowLogo} alt="" />
+                            <h4>Roll Ons</h4>
+                        </div>
+                        <div className='single-product'>
+                            <img className='product-img' src={largeYellowLogo} alt="" />
+                            <h4>Facial Care</h4>
+                        </div>
+                    </div>
                 </div>
-                <div className='products'>
-                    <div className='single-product'>
-                        <img className='product-img' src={largeYellowLogo} alt="" />
-                        <h4>Product Name</h4>
-                    </div>
-                    <div className='single-product'>
-                        <img className='product-img' src={largeYellowLogo} alt="" />
-                        <h4>Product Name</h4>
-                    </div>
-                    <div className='single-product'>
-                        <img className='product-img' src={largeYellowLogo} alt="" />
-                        <h4>Product Name</h4>
-                    </div>
-                </div>
+                <button className='home-products-button'>Shop Now</button>
             </div>
 
             <div className='home-story-div'>
@@ -79,7 +82,7 @@ export default function Home() {
                     <h4>Lunisol Wellness</h4>
                 </div>
                 <div className='essentials-text'>
-                    <h3>Essentials for a <br />full life</h3>
+                    <h2>Essentials for<br />a holistic life</h2>
                     <p>Stay healthy and live confidently with Spring & Sky</p>
                 </div>
             </div>

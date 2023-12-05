@@ -14,18 +14,18 @@ export default function OurValues() {
             </div>
             <div className="values-dropdown">
                 <div className="values-dropdown-single">
-                <div className="icon-and-category">
-                    <div className="values-icon"><PiFlaskDuotone />
-                    </div>
-                    <h4>Non-toxic Self Care</h4>
+                    <div className="icon-and-category">
+                        <div className="values-icon"><PiFlaskDuotone />
+                        </div>
+                        <h4>Non-toxic Self Care</h4>
                     </div>
                     <div className="values-icon-down-arrow"><IoIosArrowDown />
                     </div>
                 </div>
                 <div className="values-dropdown-single">
-                <div className="icon-and-category">
-                    <div className="values-icon"><PiPersonSimpleDuotone /></div>
-                    <h4>Empowering YOU</h4>
+                    <div className="icon-and-category">
+                        <div className="values-icon"><PiPersonSimpleDuotone /></div>
+                        <h4>Empowering YOU</h4>
                     </div>
                     <div className="values-icon-down-arrow"><IoIosArrowDown /></div>
                     <p className="values-dropdown-info">information </p>

@@ -66,7 +66,7 @@ export default function Header() {
             <Link to='/'>
                 <div className='logo-container'>
                     <img src={hands} alt="lunisol logo" className='header-logo' />
-                    <h1 className='header-name'>LUNISOL WELLNESS</h1>
+                    <h3 className='header-name'>LUNISOL WELLNESS</h3>
                 </div>
             </Link>
             <div className='nav-container'>
@@ -149,11 +149,13 @@ export default function Header() {
                             animate={hoverUser ? 'enter' : 'exit'}
                             variants={variants}
                         >
-                            <Link to="#">Account</Link>
-                            {Auth.loggedIn() 
-                            ? (<Link onClick={Auth.logout}>Logout</Link>) 
-                            : (<Link to="/login">Login/Signup</Link>)}
-                            
+                            {Auth.loggedIn()
+                                ? (<div><Link onClick={Auth.logout}>Logout</Link>
+                                    <Link to="#">Account</Link></div>)
+                                : (<div><Link to="/login">Login</Link>
+                                    <Link to="/signup">Sign Up</Link>
+                                </div>)}
+
                         </motion.nav>
                     </motion.div>
                 </nav>

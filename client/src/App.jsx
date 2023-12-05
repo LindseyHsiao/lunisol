@@ -9,6 +9,7 @@ import Contact from './pages/Contact'
 import OurValues from './pages/OurValues'
 import SingleProduct from './pages/SingleProduct'
 import Login from './pages/Login'
+import SignUp from './pages/SignUp'
 
 
 function App() {
@@ -26,6 +27,7 @@ function App() {
         <Route path="/ourvalues" element={<OurValues />}/>
         <Route path="/singleproduct" element={<SingleProduct />}/>
         <Route path="/login" element={<Login />}/>
+        <Route path="/signup" element={<SignUp />}/>
       </Routes>
       <Footer />
     </BrowserRouter>
