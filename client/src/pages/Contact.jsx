@@ -7,14 +7,26 @@ import { motion, AnimatePresence } from 'framer-motion';
 export default function Contact() {
     const [expand, setExpand] = useState(false)
 
+    const faqQuestions = [
+        {
+            question: 'What should I know before purchasing your products? ',
+            answer: 'answer'
+        },
+        {
+            question: 'question 2 ',
+            answer: 'answer'
+        },
+    ]
+
     const variants = {
         open: {
             opacity: 1,
-            // height: 'auto'
+            height: 'auto'
         },
         collapsed: {
             opacity: 0,
-            height: 0
+            height: 0,
+            // marginBottom: '3px'
         },
         transition: {
             duration: 0.8,
@@ -36,35 +48,40 @@ export default function Contact() {
                     </div>
                 </div>
             </div>
-            <div className='faq'>
+            <div className='faq' style={{height: '600px'}}>
                 <div>
                     <h2>Frequently Asked Questions</h2>
                 </div>
-                <div className='product-faq'>
+                <div className='product-faq' >
                     <h3>Product FAQs</h3>
-                    <div>
-                        <motion.header
-                            initial={false}
-                            animate={{ backgroundColor: expand ? '#fff' : "#fff" }}
-                            onClick={() => setExpand(!expand)}
-                            className='faq-question'
-                        >What should I know before purchasing your products? < IoIosArrowDown /></motion.header>
-                        <AnimatePresence initial={false}>
-                            {expand && (
-                            <motion.section
-                                key='content'
-                                initial='collapsed'
-                                animate='open'
-                                exit='collapsed'
-                                variants={variants}
-                                
-                            >
-                                <p className='answer'>answer</p>
-                            </motion.section>
-                            )}
-                        </AnimatePresence>
+                    {/* <div> */}
+                        {faqQuestions.map((question, i) => (
+                            <div  style={{height: '40%'}} key={i}>
+                                <motion.header
+                                    initial={false}
+                                    animate={{ backgroundColor: expand ? '#fff' : "#fff" }}
+                                    onClick={() => setExpand(!expand)}
+                                    className='faq-question'
+                                >{question.question} < IoIosArrowDown /></motion.header>
+                                <AnimatePresence initial={false}>
+                                    {expand && (
+                                        <motion.section
+                                            key='content'
+                                            initial='collapsed'
+                                            animate='open'
+                                            exit='collapsed'
+                                            variants={variants}
+                                            className='answer'
+                                        >
+                                            <p>{question.answer}</p>
+                                        </motion.section>
+                                    )}
+                                </AnimatePresence>
+                            </div>
+                        ))}
+
                         {/* <div className="values-icon-down-arrow"></div> */}
-                        <motion.header
+                        {/* <motion.header
                             initial={false}
                             animate={{ backgroundColor: expand ? '#fff' : "#fff" }}
                             onClick={() => setExpand(!expand)}
@@ -83,16 +100,16 @@ export default function Contact() {
                                 <p>answer</p>
                             </motion.section>
                             )}
-                        </AnimatePresence>
-                    </div>
+                        </AnimatePresence> */}
+                    {/* </div> */}
                 </div>
-                <div className='product-faq'>
+                {/* <div className='product-faq'>
                     <h3>Shipping & Return FAQs</h3>
                     <div className='faq-question'>
                         <p>What should I know before purchasing your products?</p>
                         <div className="values-icon-down-arrow"><IoIosArrowDown /></div>
                     </div>
-                </div>
+                </div> */}
             </div>
 
         </section>

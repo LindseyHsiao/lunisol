@@ -21,16 +21,16 @@ module.exports = {
     //     }
 
     // },
-    // async getOneProduct(req, res) {
-    //     try {
-    //         const oneProduct = await Product.findOne({ _id: req.params.id })
-    //         res.json(oneProduct)
+    async getOneProduct(req, res) {
+        try {
+            const oneProduct = await Product.findOne({ _id: req.params.id })
+            res.json(oneProduct)
 
-    //     } catch (err) {
-    //         console.log(err);
-    //         res.status(500).json(err)
-    //     }
-    // },
+        } catch (err) {
+            console.log(err);
+            res.status(500).json(err)
+        }
+    },
     // async deleteOneProduct(req, res) {
     //     try {
     //         const oneProduct = await Product.findOneAndDelete(

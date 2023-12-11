@@ -3,11 +3,31 @@ import largeYellowLogo from '../assets/largeYellowLogo.png'
 import { PiPlus } from "react-icons/pi";
 import { PiMinus } from "react-icons/pi";
 import { IoIosArrowDown } from "react-icons/io";
+import { useParams } from 'react-router-dom';
+import { getOneProduct } from '../utils/API';
+import { useEffect, useState } from 'react';
 
 
 
 
 export default function SingleProduct() {
+    const {id} =  useParams()
+    const [productData, setProductData]= useState({})
+    useEffect(()=> {
+        const getProduct = async ()=>{
+            try {
+                const response = await getOneProduct(id)
+                if (!response.ok) {
+                    throw new Error('data didnt fetch')
+                }
+                const singleItem = await response.json()
+                setProductData(singleItem)
+            } catch (error) {
+                console.log(error)
+            }
+        }
+        getProduct()
+    }, [])
     return (
         <section>
             <div className='single-product-page'>
@@ -23,7 +43,7 @@ export default function SingleProduct() {
                 </div>
                 <div>
                     <div>
-                        <h2>Product Name</h2>
+                        <h2>{productData.productName}</h2>
                         <p>0.35 fl oz</p>
                         <p>Choose me for a natural pick me up. An invigorating blend of peppermint</p>
                         <p>Quantity</p>

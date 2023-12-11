@@ -10,7 +10,7 @@ export default function OurValues() {
     return (
         <section className="our-values-section">
             <div>
-                <h1>Our Values</h1>
+                <h2>Our Values</h2>
             </div>
             <div className="values-dropdown">
                 <div className="values-dropdown-single">

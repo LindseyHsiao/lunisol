@@ -147,7 +147,7 @@ export default function Header() {
                             className="dropdownOptions"
                             initial='exit'
                             animate={hoverUser ? 'enter' : 'exit'}
-                            variants={variants}
+                            variants={variantUserIcon}
                         >
                             {Auth.loggedIn()
                                 ? (<div><Link onClick={Auth.logout}>Logout</Link>

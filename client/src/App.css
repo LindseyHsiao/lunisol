@@ -168,9 +168,8 @@ button {
   
 } */
 .alexa-heart {
-  height: auto;
+  height: 100%;
   width: 500px;
-  margin-bottom: 0;
 }
 
 .about-text {
@@ -214,7 +213,7 @@ button {
   display: flex;
   flex-direction: column;
   align-items: center;
-  padding-top: 5%;
+  padding: 5%;
 }
 .home-products-button {
   width: 200px;
@@ -226,6 +225,7 @@ button {
 .home-story-div {
   display: flex;
   background-color: #F6F1DF;
+  padding: 5%;
 
 }
 
@@ -287,6 +287,7 @@ button {
 .promo-img {
   height: 5rem;
   width: 5rem;
+  margin-top: 3%;
 }
 
 .essentials-text {
@@ -319,7 +320,7 @@ button {
   justify-content: center;
   margin-top: 5%;
   margin-bottom: 1%;
-  color: #A7A376;
+  color: #AC9C4C;
 }
 
 .shop-nav-options {
@@ -403,7 +404,7 @@ button {
   padding-left: 5%;
   line-height: 2;
   font-family: 'MyHandwriting';
-  font-size: 15px;
+  font-size: 25px;
 }
 
 .story-images {
@@ -413,73 +414,55 @@ button {
 }
 
 .story-img {
-  width: 300px;
+  width: 30%;
+  height: auto;
 }
-
-.story-cont {
+.story-healing {
+  margin-top: 5%;
+}
+.story-time {
   display: flex;
-  padding: 5%;
-}
-
-.story-cont-img {
-  /* width: 50%; */
-}
-
-.story-cont-p {
-  width: 50%;
-  display: flex;
+  flex-direction: column;
   align-items: center;
-  justify-content: center;
-
 }
 
-.story-cont-p p {
-  display: flex;
-  justify-content: center;
-
-  text-align: center;
-  /* padding-top: 5%;
-  padding-bottom: 5%; */
-  padding-right: 15%;
-  padding-left: 15%;
-  line-height: 2;
+.story-time h4 {
+  font-size: 30px;
+  margin-top: -10px;
+  margin-bottom: 0;
 }
-
-.nurse-story-cont-img {
-  width: 50%;
-  display: flex;
-  justify-content: end;
-}
-
-.nurse-story-img {
-  width: 80%;
-}
-
-.story-last-logo {
+.story-time img {
   height: 5rem;
   width: 5rem;
 }
 
-.story-cont-p-last-logo {
-  width: 50%;
+
+.story-cont-img {
+display: flex;
+padding: 5%;
+align-items: center;
+}
+.story-cont-img p {
+  padding-right: 5%;
+}
+.story-cont-img img {
+  height: 500px;
+  width: auto;
+}
+.story-pic-story {
   display: flex;
-  flex-direction: column;
   align-items: center;
-  justify-content: center;
+  text-transform: uppercase;
+  letter-spacing: 3px;
 }
-
-.story-cont-last-img {
-  width: 80%;
-  display: flex;
-  justify-content: center;
+.story-pic {
+  height: 30rem;
+  width: auto;
 }
+.story-pic-story h2 {
+  font-size: 25px;
+  letter-spacing: 4px;
 
-.story-cont-last {
-  display: flex;
-}
-
-.story-cont-p-last-logo p {
-  text-align: center;
 }
 
 .our-values-section {
@@ -487,6 +470,7 @@ button {
   flex-direction: column;
   align-items: center;
   padding-top: 5%;
+  color: #AC9C4C;
 }
 
 .values-dropdown-single {
@@ -534,11 +518,11 @@ button {
   display: flex;
   justify-content: space-around;
   padding-top: 5%;
+  color: #AC9C4C;
 }
 .stay-in-touch {
   display: flex;
   flex-direction: column;
-  color: #A7A376;
   align-items: center;
 
 }
@@ -550,7 +534,7 @@ button {
   flex-direction: column;
   align-items: center;
   padding-top: 5%;
-  color: #A7A376;
+  color: #AC9C4C;
 }
 .product-faq {
   display: flex;
@@ -563,6 +547,11 @@ button {
   align-items: center;
   height: 2rem;
   font-family: 'Garet-Book';
+}
+
+ .answer{
+ /* height: 8px !important; */
+  /* margin-bottom: 10px; */
 }
 
 .single-product-page {
@@ -604,7 +593,7 @@ button {
   align-items: center;
 }
 .footer {
-  background-color: #A7A376;
+  background-color: #AC9C4C;
   height:fit-content;
   display: flex;justify-content: space-between;
   padding-left: 5%;
@@ -626,7 +615,7 @@ button {
   padding-bottom: 4rem;
 }
 .login h2 {
-  color: #A7A376;
+  color: #AC9C4C;
 }
 .email {
   display: flex;
@@ -646,7 +635,7 @@ button {
 input::placeholder {
   font-weight: lighter;
   opacity: 0.5;
-  color: #A7A376;
+  color: #AC9C4C;
   font-family: 'Garet-Book';
   font-size: medium;
 }

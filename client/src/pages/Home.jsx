@@ -1,17 +1,26 @@
+import { Link } from 'react-router-dom'
 import largeYellowLogo from '../assets/largeYellowLogo.png'
 import iconIG from '../assets/icon-instagram.svg'
 import iconFacebook from '../assets/icon-facebook.svg'
 import alexaHeart from '../assets/alexaHeart.jpg'
 import smallLogo from '../assets/smallLogo.png'
+import { useSelector } from 'react-redux'
+
 
 export default function Home() {
+    const state = useSelector((state) => state)
+
+
+    const { cart } = state;
+
+    console.log(cart);
     return (
         <section className='home'>
             <div className='home-main'>
                 <div className='home-left'>
                     <h2>Healing <br />starts here</h2>
                     <p>We aim to re-introduce natural healing by empowering individuals to prioritize their health and wellness  through the sharing of all-natural products and knowledge that supports this journey</p>
-                    <button>Shop Now</button>
+                    <Link to='/shop'><button>Shop Now</button></Link>
                 </div>
                 <div>
                     <img className='home-logo' src={largeYellowLogo} alt="lunisol icon" />
@@ -31,7 +40,7 @@ export default function Home() {
                     <h3>Alexa, Creator of Lunisol Wellness</h3>
                     {/* <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Dolorum exercitationem voluptatum doloremque, maxime totam asperiores! Quas earum quae nisi quod cupiditate. Magni cumque, praesentium non veniam animi beatae neque fuga.
                     </p> */}
-                    <button className='story-button'>Read More</button>
+                    <Link to='/story'><button className='story-button'>Read More</button></Link>
                 </div>
             </div>
 
@@ -58,14 +67,14 @@ export default function Home() {
                         </div>
                     </div>
                 </div>
-                <button className='home-products-button'>Shop Now</button>
+                <Link to='/shop'><button className='home-products-button'>Shop Now</button></Link>
             </div>
 
             <div className='home-story-div'>
                 <div className='home-story-left'>
                     <h2>Our Story</h2>
                     <p>We aim to re-introduce natural healing by empowering individuals to prioritize their health and wellness  through the sharing of all-natural products and knowledge that supports this journey</p>
-                    <button className='story-button'>Read More</button>
+                    <Link to='/story'><button className='story-button'>Read More</button></Link>
                 </div>
                 <div>
                     <img className='home-logo' src={largeYellowLogo} alt="lunisol icon" />

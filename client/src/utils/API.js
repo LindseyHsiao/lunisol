@@ -48,3 +48,21 @@ export const loginUser = (data) => {
         body: JSON.stringify(data)
     })
 }
+
+export const getProducts = ()=> {
+    return fetch('/api/products', {
+        method: 'GET',
+        headers: {
+            'Content-Type': 'application/json'
+        },
+    })
+}
+
+export const getOneProduct = (id)=> {
+    return fetch(`/api/products/${id}`, {
+        method: 'GET',
+        headers: {
+            'Content-Type': 'application/json'
+        },
+    })
+}
