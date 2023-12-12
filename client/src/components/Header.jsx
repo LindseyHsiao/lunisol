@@ -77,9 +77,7 @@ export default function Header() {
                         onHoverEnd={toggleHoverShop}
                         className='dropdown nav-item'
                     >
-                        <p
-
-                        >Shop</p>
+                        <Link to='/shop'><p>Shop</p></Link>
                         <motion.nav
                             className="dropdownOptions"
                             initial='exit'
@@ -133,9 +131,12 @@ export default function Header() {
                 </nav>
                 <nav className='nav-right'>
                     <input type='text' placeholder='Search' className='nav-item' />
-                    <a href='#' className='nav-item'>
-                        <MdOutlineShoppingBag />
+                    <a href='#' className='nav-item nav-bag'>
+                        <MdOutlineShoppingBag style={{ height: "30px", width: "30px"}} />
                     </a>
+                    <div className='shop-bag-num'>
+                        <p>3</p>
+                    </div>
 
                     <motion.div
                         onHoverStart={toggleHoverUser}

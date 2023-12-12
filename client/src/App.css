@@ -69,6 +69,17 @@ nav a {
   outline: none;
 }
 
+.shop-bag-num {
+  background-color: #DFAD53;
+  border-radius: 50%;
+  width: 20px;
+  height: 20px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-left: -20px;
+}
+
 .dropdown {
   display: block;
   position: relative;
@@ -164,9 +175,6 @@ button {
 
 }
 
-/* .about-img {
-  
-} */
 .alexa-heart {
   height: 100%;
   width: 500px;
@@ -376,25 +384,13 @@ button {
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  padding-top: 5%;
+}
+.story h2 {
+  padding: 5%;
 }
 
-.story-title {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  background-color: #A7A376;
-}
 
-.story-title h4 {
-  padding-top: 5%;
-}
-
-.story-title h1 {
-  padding: 20%;
-}
-
-.story p {
+/* .story p {
   display: flex;
   justify-content: center;
   text-align: center;
@@ -405,12 +401,11 @@ button {
   line-height: 2;
   font-family: 'MyHandwriting';
   font-size: 25px;
-}
+} */
 
 .story-images {
   display: flex;
-  gap: 1rem;
-  justify-content: center;
+  justify-content: space-between;
 }
 
 .story-img {
@@ -593,7 +588,7 @@ align-items: center;
   align-items: center;
 }
 .footer {
-  background-color: #AC9C4C;
+  background-color: #DFAD53;
   height:fit-content;
   display: flex;justify-content: space-between;
   padding-left: 5%;

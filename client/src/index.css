@@ -16,6 +16,78 @@
         url('./assets/fonts/Aloevera-OVoWO.ttf');
 }
 
+
+@media only screen and (max-width: 600px) {
+    .nav-container {
+        flex-direction: column;
+        justify-content: space-around;
+    }
+    .home-main {
+        flex-direction: column;
+    }
+    .home-left {
+        padding-left: 5%;
+        padding-right: 5%;
+    }
+    .home-logo-container {
+       display: flex; 
+       align-items: center;
+    }
+    .about-div {
+        flex-direction: column;
+        padding-bottom: 5%;
+    }
+    .our-products {
+        flex-direction: column;
+    }
+    .products {
+        flex-direction: column;
+    }
+    .product-text {
+        width: 100%;
+    }
+    .home-story-div {
+        flex-direction: column;
+    }
+    .essentials-text {
+        padding-right: 5%;
+        margin-top: 20%;
+        text-align: end;
+    }
+    .story-cont-img {
+        flex-direction: column;
+    }
+    .story-cont-img p {
+        padding-right: 0;
+    }
+    .story-pic-story {
+        flex-direction: column;
+    }
+    .our-values-section {
+        padding-top: 20%;
+        padding-left: 5%;
+        padding-right: 5%;
+        padding-bottom: 10%;
+    }
+    .contact {
+        flex-direction: column-reverse;
+        align-items: center;
+        padding: 5%;
+        margin-top: 50px;
+    }
+    .stay-in-touch h2{
+        text-align: center;
+    }
+    .faq {
+        margin-top: 50px;
+    }
+    .faq h2 {
+        text-align: center;
+    }
+    .product-faq {
+        padding: 5%;
+    }
+}
 h2 {
     font-family: 'Aloevera';
     font-size: 60px;
@@ -31,3 +103,4 @@ h3 {
 p {
     font-family: 'Garet-Book';
 }
+

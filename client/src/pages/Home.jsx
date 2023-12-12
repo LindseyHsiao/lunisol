@@ -22,7 +22,7 @@ export default function Home() {
                     <p>We aim to re-introduce natural healing by empowering individuals to prioritize their health and wellness  through the sharing of all-natural products and knowledge that supports this journey</p>
                     <Link to='/shop'><button>Shop Now</button></Link>
                 </div>
-                <div>
+                <div className='home-logo-container'>
                     <img className='home-logo' src={largeYellowLogo} alt="lunisol icon" />
                 </div>
             </div>
@@ -38,8 +38,6 @@ export default function Home() {
                 <div className='about-text'>
                     <h2>About</h2>
                     <h3>Alexa, Creator of Lunisol Wellness</h3>
-                    {/* <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Dolorum exercitationem voluptatum doloremque, maxime totam asperiores! Quas earum quae nisi quod cupiditate. Magni cumque, praesentium non veniam animi beatae neque fuga.
-                    </p> */}
                     <Link to='/story'><button className='story-button'>Read More</button></Link>
                 </div>
             </div>
