@@ -544,10 +544,7 @@ align-items: center;
   font-family: 'Garet-Book';
 }
 
- .answer{
- /* height: 8px !important; */
-  /* margin-bottom: 10px; */
-}
+
 
 .single-product-page {
   display: flex;

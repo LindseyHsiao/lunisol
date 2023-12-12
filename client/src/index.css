@@ -54,8 +54,12 @@
         margin-top: 20%;
         text-align: end;
     }
+    .story-section {
+        padding-top: 50px;
+    }
     .story-cont-img {
         flex-direction: column;
+        padding: 0;
     }
     .story-cont-img p {
         padding-right: 0;
@@ -85,6 +89,12 @@
         text-align: center;
     }
     .product-faq {
+        padding: 5%;
+    }
+    .single-product-page {
+        flex-direction: column;
+        margin-top: 50px;
+        align-items: center;
         padding: 5%;
     }
 }

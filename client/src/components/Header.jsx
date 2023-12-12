@@ -2,15 +2,43 @@ import hands from '../assets/smallLogo.png'
 import { Link } from 'react-router-dom'
 import { MdOutlineShoppingBag } from "react-icons/md";
 import { motion } from 'framer-motion'
-import { useState } from "react";
+import { useEffect, useState } from "react";
 import { FaUserCircle } from "react-icons/fa";
 import Auth from '../utils/auth'
+
+import { useDispatch, useSelector } from 'react-redux'
 
 export default function Header() {
     const [hoverShop, setHoverShop] = useState(false)
     const [hoverAbout, setHoverAbout] = useState(false)
     const [hoverContact, setHoverContact] = useState(false)
     const [hoverUser, setHoverUser] = useState(false)
+    const [totalQuant, setTotalQuant] = useState(0)
+
+    const state = useSelector((state) => state)
+
+    const { cart } = state;
+
+    useEffect(() => {
+        function total() {
+
+            if (cart.length > 0) {
+                let sum = 0
+                const objectKeys = Object.keys(cart[0])
+                objectKeys.forEach(key => {
+                    sum = 0
+                    console.log(key);
+                    cart.map((entry) => {
+                        console.log(entry);
+                        sum += entry['purchaseQuantity'];
+                    })
+                })
+                setTotalQuant(sum);
+            }
+        }
+        total()
+    }, [cart])
+
 
     const toggleHoverShop = () => {
         setHoverShop(!hoverShop)
@@ -61,6 +89,8 @@ export default function Header() {
             }
         }
     }
+
+
     return (
         <header>
             <Link to='/'>
@@ -132,10 +162,11 @@ export default function Header() {
                 <nav className='nav-right'>
                     <input type='text' placeholder='Search' className='nav-item' />
                     <a href='#' className='nav-item nav-bag'>
-                        <MdOutlineShoppingBag style={{ height: "30px", width: "30px"}} />
+                        <MdOutlineShoppingBag style={{ height: "30px", width: "30px" }} />
                     </a>
                     <div className='shop-bag-num'>
-                        <p>3</p>
+                        <p>{totalQuant}</p>
+
                     </div>
 
                     <motion.div
