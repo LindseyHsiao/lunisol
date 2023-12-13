@@ -92,7 +92,7 @@
         padding: 5%;
     }
     .single-product-page {
-        flex-direction: column;
+        flex-direction: column-reverse;
         margin-top: 50px;
         align-items: center;
         padding: 5%;

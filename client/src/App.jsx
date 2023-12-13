@@ -10,6 +10,7 @@ import OurValues from './pages/OurValues'
 import SingleProduct from './pages/SingleProduct'
 import Login from './pages/Login'
 import SignUp from './pages/SignUp'
+import Cart from './pages/Cart'
 
 import { Provider } from 'react-redux'
 import store from './utils/store'
@@ -32,6 +33,7 @@ function App() {
           <Route path="/singleproduct/:id" element={<SingleProduct />} />
           <Route path="/login" element={<Login />} />
           <Route path="/signup" element={<SignUp />} />
+          <Route path="/cart" element={<Cart />} />
         </Routes>
         <Footer />
       </Provider>

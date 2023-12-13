@@ -544,13 +544,15 @@ align-items: center;
   font-family: 'Garet-Book';
 }
 
-
-
 .single-product-page {
   display: flex;
   justify-content: space-around;
   padding-top: 5%;
   padding-bottom: 5%;
+}
+.single-product-img {
+  margin-right: 5%;
+  margin-left: 5%;
 }
 .single-product-img img{
   height: auto;
@@ -633,9 +635,61 @@ input::placeholder {
 }
 input {
   font-family: 'Garet-Book';
-  
 }
 
+.cart-page {
+  display: flex;
+  flex-direction: column;
+  padding: 5%;
+}
+.cart-page-left-banner {
+  display: flex;
+  margin-bottom: 10px;
+}
+.cart-page-left-banner h2{
+  margin-right: 10px;
+}
+.cart-product-details {
+  display: flex;
+  padding-bottom: 5%;
 
 
+}
+.cart-item-name {
+  display: flex;
+  flex-direction: column;
+  margin-right: 5%;
+}
+
+.cart-product-details-img img{
+  width: 200px;
+  /* height: auto; */
+}
+.cart-product-details-details {
+  /* width: 70%; */
+  display: flex;
+  padding-left: 5%;
+}
+.item-specs {
+  display: flex;
+  gap: 2rem;
+  /* justify-content: end; */
+  align-items: center;
+  
+}
+.cart-selector {
+  display: flex;
+  flex-direction: column;
+}
+.empty-bag {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+.empty-bag h2 {
+  padding-bottom: 5%;
+}
+.empty-bag button {
+  width: 300px;
+}
 

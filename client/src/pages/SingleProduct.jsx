@@ -64,6 +64,7 @@ export default function SingleProduct() {
         }
         getProduct()
     }, [])
+
     return (
         <section>
             <div className='single-product-page'>
@@ -77,7 +78,7 @@ export default function SingleProduct() {
                         <img src={promo} alt="" />
                     </div>
                 </div>
-                <div>
+                <div className='prduct-data'>
                     <div>
                         <h2>{productData.productName}</h2>
                         <p>0.35 fl oz</p>

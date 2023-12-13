@@ -161,13 +161,13 @@ export default function Header() {
                 </nav>
                 <nav className='nav-right'>
                     <input type='text' placeholder='Search' className='nav-item' />
-                    <a href='#' className='nav-item nav-bag'>
+                    <Link to='/cart' className='nav-item nav-bag'>
                         <MdOutlineShoppingBag style={{ height: "30px", width: "30px" }} />
-                    </a>
-                    <div className='shop-bag-num'>
-                        <p>{totalQuant}</p>
-
-                    </div>
+                        </Link>
+                        <div className='shop-bag-num'>
+                            <p>{totalQuant}</p>
+                        </div>
+                    
 
                     <motion.div
                         onHoverStart={toggleHoverUser}
