@@ -8,12 +8,12 @@ import Auth from '../utils/auth'
 
 import { useDispatch, useSelector } from 'react-redux'
 
-export default function Header() {
+export default function Header({totalQuant, setTotalQuant}) {
     const [hoverShop, setHoverShop] = useState(false)
     const [hoverAbout, setHoverAbout] = useState(false)
     const [hoverContact, setHoverContact] = useState(false)
     const [hoverUser, setHoverUser] = useState(false)
-    const [totalQuant, setTotalQuant] = useState(0)
+    // const [totalQuant, setTotalQuant] = useState(0)
 
     const state = useSelector((state) => state)
 

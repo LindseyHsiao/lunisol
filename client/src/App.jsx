@@ -14,15 +14,16 @@ import Cart from './pages/Cart'
 
 import { Provider } from 'react-redux'
 import store from './utils/store'
+import { useState } from 'react'
 
 
 function App() {
 
-
+const [totalQuant, setTotalQuant] = useState(0)
   return (
     <BrowserRouter>
       <Provider store={store}>
-        <Header />
+        <Header totalQuant={totalQuant} setTotalQuant={setTotalQuant} />
 
         <Routes>
           <Route path="/" element={<Home />} />
@@ -33,7 +34,7 @@ function App() {
           <Route path="/singleproduct/:id" element={<SingleProduct />} />
           <Route path="/login" element={<Login />} />
           <Route path="/signup" element={<SignUp />} />
-          <Route path="/cart" element={<Cart />} />
+          <Route path="/cart" element={<Cart totalQuant={totalQuant} setTotalQuant={setTotalQuant} />} />
         </Routes>
         <Footer />
       </Provider>
