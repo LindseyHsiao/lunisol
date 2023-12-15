@@ -23,12 +23,12 @@ export default function Shop() {
         }else{
             dispatch({
             type: ADD_TO_CART,
-            product: {...cartItem, purchaseQuantity: 1}
+            product: {...cartItem, purchaseQuantity: 1, subtotal: 0}
         })
         }
         
     }
-    console.log(cart);
+    // console.log(cart);
         
     useEffect(() => {
         const getData = async () => {
@@ -66,7 +66,7 @@ export default function Shop() {
             </div>
             <div className='shop-items'>
                 {products?.map((item) => (
-                    <div className="single-item">
+                    <div className="single-item" key={item._id}>
                         <Link to={`/singleproduct/${item._id}`}>
                         <img className='single-item-img' src={item.productImage} alt={item.productImage} />
                         </Link>

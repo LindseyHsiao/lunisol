@@ -1,12 +1,13 @@
 import {
     ADD_TO_CART,
     REMOVE_FROM_CART,
-    UPDATE_CART_QUANTITY
+    UPDATE_CART_QUANTITY, 
+    UPDATE_SUB_TOTAL
 } from './actions';
 
 const initialState = {
     cart: [],
-    isCartOpen: false
+    isCartOpen: false, 
 }
 
 
@@ -17,7 +18,7 @@ export const reducers = (state = initialState, action) => {
             return {
                 ...state,
                 isCartOpen: true,
-                cart: [...state.cart, action.product]
+                cart: [...state.cart, action.product],
             };
         case REMOVE_FROM_CART:
             let newState = state.cart.filter(product => product._id !== action._id)
@@ -43,6 +44,20 @@ export const reducers = (state = initialState, action) => {
                 })
             }
 
+            case UPDATE_SUB_TOTAL:
+
+            return {
+                ...state,
+                isCartOpen: true,
+                cart: state.cart.map(product => {
+                    //if action id is equal to product id return updated quantity
+                    if (action._id === product._id) {
+                        //purchaseQuantitiy of the product to equal the purchase quantitiy of the action
+                        product.subtotal = action.subtotal
+                    }
+                    return product
+                })
+            }
         default:
             return state
     }

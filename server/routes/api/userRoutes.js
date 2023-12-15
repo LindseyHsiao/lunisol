@@ -7,8 +7,8 @@ router.route('/').post(createUser)
 router.route('/:id').get(getSingleUser)
 router.route('/login').post(login)
 
-router.route('/orders').post(
-    authMiddleware,
+router.route('/checkout').get(
+    // authMiddleware,
     checkout
     )
 

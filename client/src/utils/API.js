@@ -66,3 +66,5 @@ export const getOneProduct = (id)=> {
         },
     })
 }
+
+// export const getCheckout = ();

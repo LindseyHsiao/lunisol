@@ -5,30 +5,21 @@ import { useParams } from 'react-router-dom';
 import { getOneProduct } from '../utils/API'
 import { useEffect, useState } from 'react'
 import { useDispatch, useSelector } from 'react-redux'
-import { ADD_TO_CART, UPDATE_CART_QUANTITY, REMOVE_FROM_CART } from '../utils/actions'
+import { ADD_TO_CART, UPDATE_CART_QUANTITY, REMOVE_FROM_CART, UPDATE_SUB_TOTAL } from '../utils/actions'
 
 
-export default function Cart({setTotalQuant, totalQuant}) {
+export default function Cart({ setTotalQuant, totalQuant }) {
     const { id } = useParams()
     const dispatch = useDispatch()
-    const state = useSelector((state) => state)
-    const [productData, setProductData] = useState({})
 
-    const { cart } = state;
+    // const [productData, setProductData] = useState({})
+    const [prices, setPrices] = useState([])
+    
+
+    const { cart } = useSelector((state) => state)
 
 
-    const addToCart = (cartItem) => {
-        const itemInCart = cart.find((item) => item._id === cartItem._id)
-        if (itemInCart) {
-            console.log(itemInCart);
-            dispatch({
-                type: UPDATE_CART_QUANTITY,
-                _id: cartItem._id,
-                purchaseQuantity: parseInt(itemInCart.purchaseQuantity)
-            })
-        } 
 
-    }
 
     const removeFromCart = (cartItem) => {
         // console.log(cartItem);
@@ -44,54 +35,79 @@ export default function Cart({setTotalQuant, totalQuant}) {
     }
 
 
-    useEffect(() => {
-        const getProduct = async () => {
-            try {
-                const response = await getOneProduct(id)
-                if (!response.ok) {
-                    throw new Error('data didnt fetch')
-                }
-                const singleItem = await response.json()
-                setProductData(singleItem)
-            } catch (error) {
-                console.log(error)
-            }
-        }
-        getProduct()
-    }, [])
+    // useEffect(() => {
+    //     const getProduct = async () => {
+    //         try {
+    //             const response = await getOneProduct(id)
+    //             if (!response.ok) {
+    //                 throw new Error('data didnt fetch')
+    //             }
+    //             const singleItem = await response.json()
+    //             setProductData(singleItem)
+    //         } catch (error) {
+    //             console.log(error)
+    //         }
+    //     }
+    //     getProduct()
+    // }, [])
+
+
 
     useEffect(() => {
         function total() {
 
-            if (cart.length ) {
+            if (cart.length) {
+                // console.log(cart);
                 let sum = 0
+                let totalPrice=0
+                
                 const objectKeys = Object.keys(cart[0])
                 objectKeys.forEach(key => {
                     sum = 0
+                    totalPrice = 0
                     // console.log(key);
                     cart.map((entry) => {
-                        console.log(entry);
+                        // console.log(entry);
                         sum += entry['purchaseQuantity'];
+                        totalPrice += (entry['purchaseQuantity'] * entry['price'])
+                   
+                        
                     })
                 })
                 setTotalQuant(sum);
-            }else{
+                
+                setPrices(totalPrice)
+            } else {
                 setTotalQuant(0)
             }
         }
         total()
     }, [cart])
 
-  
+// console.log(prices);
 
-    const handleChange =  (event, productData) => {
-        let value =  event.target.value;
-        const updatedProd =  { ...productData, purchaseQuantity: parseInt(value)}
-        console.log(updatedProd);
+    const handleChange = (event, productData) => {
+        let value = event.target.value;
+
+        dispatch({
+            type: UPDATE_CART_QUANTITY,
+            _id: productData._id,
+            purchaseQuantity: parseInt(value)
+        })
     }
-    
+
     const totalItemPrice = (productData) => {
-        parseInt(productData.price) * parseInt(productData.purchaseQuantity)
+        // console.log(productData.purchaseQuantity * productData.price);
+        const totalPrice = productData.purchaseQuantity * productData.price
+
+        // dispatch({
+        //     type: UPDATE_SUB_TOTAL,
+        //     _id: productData._id,
+        //     subtotal: parseFloat(totalPrice)
+        // })
+        
+        return '$' + totalPrice
+        // console.log(parseInt(productData[0].price) * parseInt(productData[0].purchaseQuantity));
     }
 
 
@@ -105,7 +121,7 @@ export default function Cart({setTotalQuant, totalQuant}) {
             {cart.length ? (
                 <div>
                     {cart.map((item) => (
-                        <div className='cart-product-details'>
+                        <div className='cart-product-details' key={item._id}>
                             <Link to={`/singleproduct/${item._id}`}>
                                 <img className='cart-product-details-img' src={item.productImage} alt={item.productImage} />
                             </Link>
@@ -119,10 +135,10 @@ export default function Cart({setTotalQuant, totalQuant}) {
                                 <div className='item-specs'>
                                     <div>
                                         <h4>Item Price</h4>
-                                        <p>{item.price}</p>
+                                        <p>${item.price}</p>
                                     </div>
                                     <div className='cart-selector'>
-                                        <label for="quantity-select">Quantity</label>
+                                        <label htmlFor="quantity-select">Quantity</label>
                                         <select name="quantity" id="quantity-select" onChange={(e) => handleChange(e, item)}>
                                             <option value="num-of-item">{item.purchaseQuantity}</option>
                                             <option value="1">1</option>
@@ -139,12 +155,13 @@ export default function Cart({setTotalQuant, totalQuant}) {
                                     </div>
                                     <div>
                                         <h4>Total Price</h4>
-                                        <p>{totalItemPrice}</p>
+                                        <p>{totalItemPrice(item)}</p>
                                     </div>
                                 </div>
                             </div>
                         </div>
                     ))}
+                    <h3>subTotal: {prices}</h3>
                 </div>
             ) : (
                 <div className='empty-bag'>

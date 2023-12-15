@@ -27,9 +27,9 @@ export default function Header({totalQuant, setTotalQuant}) {
                 const objectKeys = Object.keys(cart[0])
                 objectKeys.forEach(key => {
                     sum = 0
-                    console.log(key);
+                    // console.log(key);
                     cart.map((entry) => {
-                        console.log(entry);
+                        // console.log(entry);
                         sum += entry['purchaseQuantity'];
                     })
                 })

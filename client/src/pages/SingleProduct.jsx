@@ -41,7 +41,7 @@ export default function SingleProduct() {
         } else {
             dispatch({
                 type: ADD_TO_CART,
-                product: { ...cartItem, purchaseQuantity: counter }
+                product: { ...cartItem, purchaseQuantity: counter , subtotal: 0}
             })
         }
 

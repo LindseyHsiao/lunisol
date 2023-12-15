@@ -4,6 +4,10 @@ const { User, Order } = require('../models')
 // import sign token function from auth
 const { signToken } = require('../utils/auth');
 
+require('dotenv').config()
+
+const stripe = require('stripe')(process.env.STRIPE_SK)
+
 module.exports = {
     async createUser(req, res) {
         const user = await User.create(req.body);
@@ -41,23 +45,41 @@ module.exports = {
         const token = signToken(user);
         res.json({ token, user });
     },
-    async checkout({ user, body }, res) {
-        // create the order, once the order is creted in mongoose. we need to push the orderId into the user. 
-        try {
+    async checkout(req, res) {
+        const url = 'http://localhost:5173'
+        const order = await Order.create(req.body)
+        const lineItems = []
 
-            const order = await Order.create(body);
+        const { products } = await Order.findById(order._id).populate('products')
 
+        for (let i = 0; i < products.length; i++) {
+            const product = await stripe.products.create({
+                name: products[i].productName,
+                description: products[i].description,
+                // possibly the images
+            });
 
-            const updatedUser = await User.findByIdAndUpdate(user._id, {
-                $push: { orders: order._id }
-            }, { new: true })
+            const price = await stripe.prices.create({
+                product: product.id,
+                unit_amount: products[i].price * 100,
+                currency: 'usd'
+            })
 
-            res.json(updatedUser)
-        } catch (err) { 
-            console.log(err);
-            res.json(err)
+            lineItems.push({
+                price: price.id,
+                quantity: 1
+            })
+
+            const session = await stripe.checkout.sessions.create({
+                payment_method_types: ['card'],
+                lineItems,
+                mode: 'payment',
+                success_url: `${url}/success?session_id:{CHECKOUT_SESSION_ID}`,
+                cancel_url: url
+            })
+
+            return { session: session.id }
         }
-
     },
 
 }
