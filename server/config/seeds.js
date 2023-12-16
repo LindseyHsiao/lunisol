@@ -8,11 +8,21 @@ await cleanDb('Category', 'categories')
 const categories = await Category.insertMany(
     [
         {
-            category: 'category  one'
+            category: 'Roll Ons'
         },
         {
-            category: ' category two'
-        }
+            category: ' Scrubs'
+        },
+        {
+            category: 'Mists'
+        },
+        {
+            category: 'Salves'
+        },
+        {
+            category: 'Seasonal'
+        },
+        
     ]
 );
 
@@ -21,16 +31,48 @@ console.log('categories inserted');
 const products =  await Product.insertMany(
     [
         {
-            productName: 'product one',
-            description: 'asdasdas',
+            productName: 'Zen Roll On',
+            description: 'Roll on description',
             productImage: 'asdasd',
             category: categories[0]._id,
-            price: 10.99,
+            price: 13.00,
             stock: 150
         },
         {
-            productName: 'product two',
-            description: 'fghfhfg',
+            productName: 'Sleepi Roll On',
+            description: 'Roll on description',
+            productImage: 'asdasd',
+            category: categories[0]._id,
+            price: 13.00,
+            stock: 150
+        },
+        {
+            productName: 'Energi Roll On',
+            description: 'Roll on description',
+            productImage: 'asdasd',
+            category: categories[0]._id,
+            price: 13.00,
+            stock: 150
+        },
+        {
+            productName: 'Tea Tree Face Mist',
+            description: 'Face Mist description',
+            productImage: 'hhh',
+            category: categories[1]._id,
+            price: 5.99,
+            stock: 2000
+        },
+        {
+            productName: 'Sana Head2Toe Healing Salve',
+            description: 'Healing Salve description',
+            productImage: 'hhh',
+            category: categories[1]._id,
+            price: 5.99,
+            stock: 2000
+        },
+        {
+            productName: 'Sugar Scrub',
+            description: 'Sugar Scrub description',
             productImage: 'hhh',
             category: categories[1]._id,
             price: 5.99,

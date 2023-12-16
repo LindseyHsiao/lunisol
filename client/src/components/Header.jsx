@@ -160,7 +160,7 @@ export default function Header({totalQuant, setTotalQuant}) {
 
                 </nav>
                 <nav className='nav-right'>
-                    <input type='text' placeholder='Search' className='nav-item' />
+                    <input type='search' placeholder='Search' className='nav-item' />
                     <Link to='/cart' className='nav-item nav-bag'>
                         <MdOutlineShoppingBag style={{ height: "30px", width: "30px" }} />
                         </Link>

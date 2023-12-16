@@ -11,11 +11,7 @@ import { ADD_TO_CART, UPDATE_CART_QUANTITY, REMOVE_FROM_CART, UPDATE_SUB_TOTAL }
 export default function Cart({ setTotalQuant, totalQuant }) {
     const { id } = useParams()
     const dispatch = useDispatch()
-
-    // const [productData, setProductData] = useState({})
     const [prices, setPrices] = useState([])
-    
-
     const { cart } = useSelector((state) => state)
 
 

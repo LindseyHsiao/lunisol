@@ -9,6 +9,7 @@ export const createUser = (data) => {
     })
 }
 
+
 // check this!!!
 export const updateUser = (data) => {
     return fetch(`/api/user/${id}`, {
@@ -64,6 +65,16 @@ export const getOneProduct = (id)=> {
         headers: {
             'Content-Type': 'application/json'
         },
+    })
+}
+
+export const createProduct = (data) => {
+    return fetch('/api/products', {
+        method: 'POST',
+        headers: {
+            'Content-Type': 'application/json'
+        },
+        body: JSON.stringify(data)
     })
 }
 
