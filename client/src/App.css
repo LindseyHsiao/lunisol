@@ -407,7 +407,10 @@ button {
   display: flex;
   justify-content: space-between;
 }
-
+.story-nurse-img {
+  padding-bottom: 5%;
+  padding-top: 5%;
+}
 .story-img {
   width: 30%;
   height: auto;

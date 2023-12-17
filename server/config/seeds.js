@@ -11,7 +11,7 @@ const categories = await Category.insertMany(
             category: 'Roll Ons'
         },
         {
-            category: ' Scrubs'
+            category: 'Scrubs'
         },
         {
             category: 'Mists'
@@ -77,23 +77,7 @@ const products =  await Product.insertMany(
             category: categories[1]._id,
             price: 5.99,
             stock: 2000
-        },
-        // {
-        //     productName: '',
-        //     description: '',
-        //     productImage: '',
-        //     category: '',
-        //     price: 0,
-        //     stock: 0
-        // },
-        // {
-        //     productName: '',
-        //     description: '',
-        //     productImage: '',
-        //     category: '',
-        //     price: 0,
-        //     stock: 0
-        // }
+        }
     ]
 );
 

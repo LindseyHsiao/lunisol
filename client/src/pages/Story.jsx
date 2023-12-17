@@ -40,7 +40,7 @@ export default function Story() {
                     purest beings on this planet, children. The journey through the
                     nursing profession was marked by mental, emotional, and
                     spiritual challenges. In my lowest moments, yoga became my refuge, providing a sanctuary for self-discovery and growth. During my senior year at university, I completed a transformative 200-Hour Yoga Teacher Training, setting the stage for a magical journey of self-healing and wellness.</p>
-                <img className='story-img' src={nurse} alt="" />
+                <img className='story-nurse-img' src={nurse} alt="" />
 
             </div>
 

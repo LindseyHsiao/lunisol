@@ -5,14 +5,14 @@ import { Navigate } from 'react-router-dom'
 export default function ProductEntryForm() {
     const [redirect, setRedirect] = useState(false);
     const [newProduct, setNewProduct] = useState({
-            productName: '',
-            description: '',
-            productImage: '',
-            category: '',
-            price: 0,
-            stock: 0
+        productName: '',
+        description: '',
+        productImage: '',
+        category: '',
+        price: 0,
+        stock: 0
     })
-   
+
     //on change 
     const handleChange = (e) => {
         const { name, value } = e.target
@@ -22,14 +22,11 @@ export default function ProductEntryForm() {
     const handleSubmit = async (e) => {
         e.preventDefault()
         try {
-            
             const response = await createProduct(newProduct)
-
-            
             console.log(newProduct)
-          if (response.ok) {
-            setRedirect(true);
-          }
+            if (response.ok) {
+                setRedirect(true);
+            }
 
         } catch (err) {
             console.log(err);
@@ -37,46 +34,46 @@ export default function ProductEntryForm() {
 
     }
 
-    if (redirect){
-       return <Navigate to={'/shop'} />
+    if (redirect) {
+        return <Navigate to={'/shop'} />
     }
     return (
         <div className="product-entry-div">
             <h1 className="text-xl pb-5" >Product Entry Form</h1>
-            
+
             <form onSubmit={handleSubmit} className='new-product-form'>
-                <input type="text"
+                <input type="text" className='email-input'
                     placeholder={'Product Name'}
                     id='Product Name' name='Product Name'
                     value={newProduct.productName}
                     onChange={handleChange} />
-                <input type="text"
+                <input type="text" className='email-input'
                     placeholder={'Description'}
                     id='description'
                     name='description'
                     value={newProduct.description}
                     onChange={handleChange} />
-                <input type="url"
+                <input type="url" className='email-input'
                     placeholder={'Image URL'}
                     id='productImage'
                     name='productImage'
                     value={newProduct.productImage}
                     onChange={handleChange} />
-                 <input type="text"
+                <input type="text" className='email-input'
                     placeholder={'Category'}
                     id='category'
                     name='category'
                     value={newProduct.category}
                     onChange={handleChange} />
                 <label>Price</label>
-                <input type="number"
+                <input type="number" className='email-input'
                     placeholder={'Price'}
                     id='price'
                     name='price'
                     value={newProduct.price}
                     onChange={handleChange} />
                 <label>Stock</label>
-                <input type="number"
+                <input type="number" className='email-input'
                     placeholder={'Stock'}
                     id='stock'
                     name='stock'
@@ -89,5 +86,5 @@ export default function ProductEntryForm() {
             </form>
 
         </div>
-  )
+    )
 }
