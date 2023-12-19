@@ -5,6 +5,7 @@ module.exports = {
     async getProducts(req, res) {
         try {
             const productData = await Product.find()
+            console.log(productData);
             res.json(productData)
         } catch (err) {
             res.json(err)

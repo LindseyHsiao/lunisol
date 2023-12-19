@@ -39,7 +39,7 @@ export default function ProductEntryForm() {
     }
     return (
         <div className="product-entry-div">
-            <h1 className="text-xl pb-5" >Product Entry Form</h1>
+            <h2>Product Entry Form</h2>
 
             <form onSubmit={handleSubmit} className='new-product-form'>
                 <input type="text" className='email-input'
@@ -65,15 +65,15 @@ export default function ProductEntryForm() {
                     name='category'
                     value={newProduct.category}
                     onChange={handleChange} />
-                <label>Price</label>
-                <input type="number" className='email-input'
+                {/* <label>Price</label> */}
+                <input type="text" className='email-input'
                     placeholder={'Price'}
                     id='price'
                     name='price'
                     value={newProduct.price}
                     onChange={handleChange} />
-                <label>Stock</label>
-                <input type="number" className='email-input'
+                {/* <label>Stock</label> */}
+                <input type="text" className='email-input'
                     placeholder={'Stock'}
                     id='stock'
                     name='stock'
@@ -81,7 +81,7 @@ export default function ProductEntryForm() {
                     onChange={handleChange} />
 
                 <button type="submit"
-                    className=''>Submit</button>
+                    className='product-entry-button'>Submit</button>
 
             </form>
 

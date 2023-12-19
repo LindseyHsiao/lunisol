@@ -699,6 +699,8 @@ input {
   display: flex;
   flex-direction: column;
   align-items: center;
+  margin-top: 100px;
+  margin-bottom: 100px;
 }
 .empty-bag h2 {
   padding-bottom: 5%;
@@ -711,11 +713,22 @@ input {
   display: flex;
   flex-direction: column;
   align-items: center;
+  margin-top: 5%;
+  margin-bottom: 7%;
+}
+.product-entry-div h2 {
+  color: #AC9C4C;
+  margin-top: 40px;
+  margin-bottom: 40px;
+
 }
 .new-product-form {
   display: flex;
   flex-direction: column;
   width: 40%;
-  gap: 1rem;
+  gap: 1.5rem;
+}
+.product-entry-button {
+  margin-top: 40px;
 }
 
