@@ -4,11 +4,16 @@ import { MdOutlineShoppingBag } from "react-icons/md";
 import { motion } from 'framer-motion'
 import { useEffect, useState } from "react";
 import { FaUserCircle } from "react-icons/fa";
+import { GiHamburgerMenu } from 'react-icons/gi'
+import { IoCloseSharp } from "react-icons/io5";
 import Auth from '../utils/auth'
 
 import { useDispatch, useSelector } from 'react-redux'
 
-export default function Header({totalQuant, setTotalQuant}) {
+export default function Header({ totalQuant, setTotalQuant }) {
+    const [toggle, setToggle] = useState(false)
+
+
     const [hoverShop, setHoverShop] = useState(false)
     const [hoverAbout, setHoverAbout] = useState(false)
     const [hoverContact, setHoverContact] = useState(false)
@@ -93,12 +98,40 @@ export default function Header({totalQuant, setTotalQuant}) {
 
     return (
         <header>
-            <Link to='/'>
-                <div className='logo-container'>
-                    <img src={hands} alt="lunisol logo" className='header-logo' />
-                    <h3 className='header-name'>LUNISOL WELLNESS</h3>
-                </div>
-            </Link>
+            <div className='mobile-header'>
+                <Link to='/' className='main-logo-link'>
+                    <div className='logo-container'>
+                        <img src={hands} alt="lunisol logo" className='header-logo' />
+                        <h3 className='header-name'>LUNISOL WELLNESS</h3>
+                    </div>
+                </Link>
+
+{/* <div className='hidden'> */}
+                {toggle ? (<IoCloseSharp className={toggle ? " hamburger  open" : " hamburger "} onClick={() => setToggle(!toggle)} />) : (<GiHamburgerMenu className={toggle ? " hamburger open" : " hamburger "} onClick={() => setToggle(!toggle)} />)}
+{/*     
+</div> */}
+
+
+
+
+
+
+
+
+
+                
+            </div>
+            {/* <!-- mobile menu --> */}
+            <div className={toggle ? "menu-hello" : "hidden"}>
+                <a href="/Services" className="hover:text-pink-500">Shop</a>
+                <a href="/Contact" className="hover:text-pink-500">About</a>
+                <a href="/AllBlogs" className="hover:text-pink-500">Contact</a>
+                <a href="/About" className="hover:text-pink-500">About</a>
+            </div>
+
+
+
+
             <div className='nav-container'>
                 <nav className='nav-left'>
 
@@ -163,11 +196,11 @@ export default function Header({totalQuant, setTotalQuant}) {
                     <input type='search' placeholder='Search' className='nav-item' />
                     <Link to='/cart' className='nav-item nav-bag'>
                         <MdOutlineShoppingBag style={{ height: "30px", width: "30px" }} />
-                        </Link>
-                        <div className='shop-bag-num'>
-                            <p>{totalQuant}</p>
-                        </div>
-                    
+                    </Link>
+                    <div className='shop-bag-num'>
+                        <p>{totalQuant}</p>
+                    </div>
+
 
                     <motion.div
                         onHoverStart={toggleHoverUser}
@@ -191,7 +224,13 @@ export default function Header({totalQuant, setTotalQuant}) {
                         </motion.nav>
                     </motion.div>
                 </nav>
+
+
             </div>
+
+
+
+
         </header>
     )
 }

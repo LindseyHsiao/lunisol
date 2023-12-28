@@ -17,7 +17,37 @@
 }
 
 
+
+.hidden {
+    display: none;
+}
+h2 {
+    font-family: 'Aloevera';
+    font-size: 60px;
+    margin-bottom: 0;
+    margin-top: 0;
+    
+}
+h3 {
+    font-family: 'Garet-Book';
+    text-transform: uppercase;
+    letter-spacing: .2rem;
+}
+p {
+    font-family: 'Garet-Book';
+}
+
+.currency-input::before{
+  position: absolute;
+  top: 0;
+  content: '$';
+  left: 5px;
+}
+
 @media only screen and (max-width: 600px) {
+    /* .hidden{
+        display: block ;
+    } */
     .nav-container {
         flex-direction: column;
         justify-content: space-around;
@@ -48,6 +78,9 @@
     }
     .home-story-div {
         flex-direction: column;
+    }
+    .alexa-heart{
+        width: 100%;
     }
     .essentials-text {
         padding-right: 5%;
@@ -97,20 +130,91 @@
         align-items: center;
         padding: 5%;
     }
-}
-h2 {
-    font-family: 'Aloevera';
-    font-size: 60px;
-    margin-bottom: 0;
-    margin-top: 0;
+    .nav-left {
+        display: none;
+    }
 
-}
-h3 {
-    font-family: 'Garet-Book';
+    .mobile-header {
+        display: flex;
+        align-items: center;
+        background-color: #AC9C4C;
+    }
+    .main-logo-link{
+        flex: 0 0 95%;
+    }
+    /* .menu-display {
+        display: block;
+        z-index: 40;
+    } */
+    /* hamburger menu */
+.hamburger {
+    cursor: pointer;
+    width: 24px;
+    height: 24px;
+    transition: all 0.25s;
+    position: relative;
+  }
+/*   
+  .hamburger-top,
+  .hamburger-middle,
+  .hamburger-bottom {
+    position: absolute;
+    width: 24px;
+    height: 2px;
+    top: 0;
+    left: 0;
+    background: black;
+    transform: rotate(0);
+    transition: all 0.5s;
+  }
+  
+  .hamburger-middle {
+    transform: translateY(7px);
+  }
+  
+  .hamburger-bottom {
+    transform: translateY(14px);
+  } */
+  
+  .open {
+    transform: rotate(90deg);
+
+  }
+  
+  /* .open .hamburger-top {
+    transform: rotate(45deg) translateY(6px) translateX(6px);
+  }
+  
+  .open .hamburger-middle {
+    display: none;
+  }
+  
+  .open .hamburger-bottom {
+    transform: rotate(-45deg) translateY(6px) translateX(-6px);
+    content:  'x'
+  } */
+  .menu-hello {
+    position: absolute;
+    top: 21%;
+    bottom: 0px;
+    left: 0px;
+    display: flex;
+    flex-direction: column;
+    align-self: flex-end;
+    width: 100%;
+    min-height: 100vh;
+    padding-top: 0.25rem; 
+    padding-bottom: 0.25rem;
+    padding-top: 10rem;
+    padding-left: 3rem;
+    margin-top: 0.75rem;
+    font-size: medium;
+    color: black;
     text-transform: uppercase;
-    letter-spacing: .2rem;
+    background-color: #DFAD53;
+  }
+  .mobile-menu-options:hover {
+    color: white;
+  }
+  
 }
-p {
-    font-family: 'Garet-Book';
-}
-

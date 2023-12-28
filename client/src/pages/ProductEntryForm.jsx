@@ -61,21 +61,18 @@ export default function ProductEntryForm() {
                     onChange={handleChange} />
                 <input type="text" className='email-input'
                     placeholder={'Category'}
-                    id='category'
                     name='category'
                     value={newProduct.category}
                     onChange={handleChange} />
-                {/* <label>Price</label> */}
-                <input type="text" className='email-input'
+                <label>Price</label>
+                <input type="number" className='email-input currency-input'
                     placeholder={'Price'}
-                    id='price'
                     name='price'
                     value={newProduct.price}
                     onChange={handleChange} />
-                {/* <label>Stock</label> */}
+                <label>Stock</label>
                 <input type="text" className='email-input'
                     placeholder={'Stock'}
-                    id='stock'
                     name='stock'
                     value={newProduct.stock}
                     onChange={handleChange} />

@@ -157,7 +157,7 @@ export default function Cart({ setTotalQuant, totalQuant }) {
                             </div>
                         </div>
                     ))}
-                    <h3>subTotal: {prices}</h3>
+                    <h3>subTotal: ${prices}</h3>
                 </div>
             ) : (
                 <div className='empty-bag'>
