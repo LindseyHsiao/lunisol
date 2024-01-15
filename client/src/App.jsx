@@ -17,6 +17,7 @@ import Checkout from './pages/Checkout'
 import { Provider , useSelector} from 'react-redux'
 import store from './utils/store'
 import { useState } from 'react'
+import SpatulaApp from './pages/SpatulaApp'
 
 
 
@@ -43,6 +44,7 @@ const [totalQuant, setTotalQuant] = useState(0)
           <Route path="/cart" element={<Cart totalQuant={totalQuant} setTotalQuant={setTotalQuant}  />} />
           <Route path="/productentryform" element={<ProductEntryForm />} />
           <Route path="/checkout" element={<Checkout />} />
+          <Route path="/SpatulaApp" element={<SpatulaApp />} />
 
         </Routes>
         <Footer />

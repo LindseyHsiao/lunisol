@@ -18,7 +18,7 @@
 
 
 
-.hidden {
+.hidden .mobile-hidden {
     display: none;
 }
 h2 {
@@ -45,9 +45,9 @@ p {
 }
 
 @media only screen and (max-width: 600px) {
-    /* .hidden{
+    .mobile-hidden{
         display: block ;
-    } */
+    }
     .nav-container {
         flex-direction: column;
         justify-content: space-around;

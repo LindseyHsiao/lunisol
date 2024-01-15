@@ -106,9 +106,9 @@ export default function Header({ totalQuant, setTotalQuant }) {
                     </div>
                 </Link>
 
-{/* <div className='hidden'> */}
+{/* <div className='mobile-hidden'>
                 {toggle ? (<IoCloseSharp className={toggle ? " hamburger  open" : " hamburger "} onClick={() => setToggle(!toggle)} />) : (<GiHamburgerMenu className={toggle ? " hamburger open" : " hamburger "} onClick={() => setToggle(!toggle)} />)}
-{/*     
+    
 </div> */}
 
 
@@ -122,12 +122,12 @@ export default function Header({ totalQuant, setTotalQuant }) {
                 
             </div>
             {/* <!-- mobile menu --> */}
-            <div className={toggle ? "menu-hello" : "hidden"}>
+            {/* <div className={toggle ? "menu-hello" : "hidden"}>
                 <a href="/Services" className="hover:text-pink-500">Shop</a>
                 <a href="/Contact" className="hover:text-pink-500">About</a>
                 <a href="/AllBlogs" className="hover:text-pink-500">Contact</a>
                 <a href="/About" className="hover:text-pink-500">About</a>
-            </div>
+            </div> */}
 
 
 
