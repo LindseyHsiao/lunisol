@@ -33,8 +33,8 @@ router.post("/", async (req, res) => {
         const session = await stripe.checkout.sessions.create({
             line_items,
             mode: 'payment',
-            success_url: `http://localhost:5174?success=1`,
-            cancel_url: `http://localhost:5174?canceled=1`,
+            success_url: `http://localhost:5173/success`,
+            cancel_url: `http://localhost:5173/checkout`,
           });
         
         //   res.redirect(303, session.url);

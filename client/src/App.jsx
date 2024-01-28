@@ -12,12 +12,13 @@ import Login from './pages/Login'
 import SignUp from './pages/SignUp'
 import Cart from './pages/Cart'
 import ProductEntryForm from './pages/ProductEntryForm'
+import Success from './pages/Success'
 import Checkout from './pages/Checkout'
 
 import { Provider , useSelector} from 'react-redux'
 import store from './utils/store'
-import { useState } from 'react'
-import SpatulaApp from './pages/SpatulaApp'
+import { useState, useEffect } from 'react'
+// import SpatulaApp from './pages/SpatulaApp'
 
 
 
@@ -43,8 +44,9 @@ const [totalQuant, setTotalQuant] = useState(0)
           <Route path="/signup" element={<SignUp />} />
           <Route path="/cart" element={<Cart totalQuant={totalQuant} setTotalQuant={setTotalQuant}  />} />
           <Route path="/productentryform" element={<ProductEntryForm />} />
+          <Route path="/success" element={<Success />} />
           <Route path="/checkout" element={<Checkout />} />
-          <Route path="/SpatulaApp" element={<SpatulaApp />} />
+          {/* <Route path="/SpatulaApp" element={<SpatulaApp />} /> */}
 
         </Routes>
         <Footer />

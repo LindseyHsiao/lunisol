@@ -1,5 +1,5 @@
-require('dotenv').config();
 const mongoose = require('mongoose');
+require('dotenv').config();
 
 mongoose.connect(process.env.MONGODB_LOCAL);
 

@@ -45,6 +45,8 @@ export default function Header({ totalQuant, setTotalQuant }) {
     }, [cart])
 
 
+
+
     const toggleHoverShop = () => {
         setHoverShop(!hoverShop)
     }

@@ -671,7 +671,7 @@ input {
   margin-right: 5%;
 }
 
-.cart-product-details-img img{
+.cart-product-details-img {
   width: 200px;
   /* height: auto; */
 }
@@ -731,7 +731,15 @@ input {
 .product-entry-button {
   margin-top: 40px;
 }
+.checkout {
+  display: flex;
+  align-items: center;
+}
+.checkout-info {
+  display: flex;
+  flex-direction: row;
 
+}
 
 
 /* stripe  */

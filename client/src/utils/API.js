@@ -79,3 +79,13 @@ export const createProduct = (data) => {
 }
 
 // export const getCheckout = ();
+
+export const createOrder = (data) => {
+    return fetch('/api/orders', {
+        method: 'POST',
+        headers: {
+            'Content-Type': 'application/json'
+        },
+        body: JSON.stringify(data)
+    })
+}

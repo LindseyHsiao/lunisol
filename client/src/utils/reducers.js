@@ -6,7 +6,7 @@ import {
 } from './actions';
 
 const initialState = {
-    cart: [],
+    cart: JSON.parse(localStorage.getItem('cart'))||[],
     isCartOpen: false, 
 }
 

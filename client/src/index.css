@@ -142,10 +142,30 @@ p {
     .main-logo-link{
         flex: 0 0 95%;
     }
+    .cart-product-details {
+        flex-direction: column;
+        align-items: center;
+        margin-top: 5%;;
+    }
+    .cart-product-details-details {
+        flex-direction: column;
+    }
+    .item-specs {
+        justify-content: space-between;
+        
+    }
+
+
+
+
+
+
+
     /* .menu-display {
         display: block;
         z-index: 40;
     } */
+
     /* hamburger menu */
 .hamburger {
     cursor: pointer;

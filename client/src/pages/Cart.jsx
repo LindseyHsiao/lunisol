@@ -13,9 +13,8 @@ export default function Cart({ setTotalQuant, totalQuant }) {
     const dispatch = useDispatch()
     const [prices, setPrices] = useState([])
     const { cart } = useSelector((state) => state)
-
-
-
+    const [cartData, setCartData]= useState([])
+    
 
     const removeFromCart = (cartItem) => {
         // console.log(cartItem);
@@ -29,6 +28,22 @@ export default function Cart({ setTotalQuant, totalQuant }) {
         // }
 
     }
+
+   
+    const effect = () => {
+        // Check to see if this is a redirect back from Checkout
+        const query = new URLSearchParams(window.location.search);
+      
+        if (query.get("success")) {
+            setMessage("Order placed! You will receive an email confirmation.");
+        }
+      
+        if (query.get("canceled")) {
+            window.location.reload()
+        }
+      };
+      
+      useEffect(effect, [])
 
 
     // useEffect(() => {
@@ -55,8 +70,8 @@ export default function Cart({ setTotalQuant, totalQuant }) {
             if (cart.length) {
                 // console.log(cart);
                 let sum = 0
-                let totalPrice=0
-                
+                let totalPrice = 0
+
                 const objectKeys = Object.keys(cart[0])
                 objectKeys.forEach(key => {
                     sum = 0
@@ -66,12 +81,12 @@ export default function Cart({ setTotalQuant, totalQuant }) {
                         // console.log(entry);
                         sum += entry['purchaseQuantity'];
                         totalPrice += (entry['purchaseQuantity'] * entry['price'])
-                   
-                        
+
+
                     })
                 })
                 setTotalQuant(sum);
-                
+
                 setPrices(totalPrice)
             } else {
                 setTotalQuant(0)
@@ -80,7 +95,7 @@ export default function Cart({ setTotalQuant, totalQuant }) {
         total()
     }, [cart])
 
-// console.log(prices);
+    // console.log(prices);
 
     const handleChange = (event, productData) => {
         let value = event.target.value;
@@ -101,7 +116,7 @@ export default function Cart({ setTotalQuant, totalQuant }) {
         //     _id: productData._id,
         //     subtotal: parseFloat(totalPrice)
         // })
-        
+
         return '$' + totalPrice
         // console.log(parseInt(productData[0].price) * parseInt(productData[0].purchaseQuantity));
     }
@@ -158,6 +173,12 @@ export default function Cart({ setTotalQuant, totalQuant }) {
                         </div>
                     ))}
                     <h3>subTotal: ${prices}</h3>
+                    <Link to='/checkout'>
+                        {/* onSubmit={checkOutStripe} */}
+                        {/* <button type="submit"> */}
+                            Checkout
+                        {/* </button> */}
+                    </Link>
                 </div>
             ) : (
                 <div className='empty-bag'>

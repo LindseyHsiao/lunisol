@@ -33,7 +33,7 @@ db.once('open', async () => {
             {
                 productName: 'Zen Roll On',
                 description: 'Roll on description',
-                productImage: 'asdasd',
+                productImage: 'https://github.com/LindseyHsiao/lunisol/blob/main/client/src/assets/promo.jpeg?raw=true',
                 category: categories[0]._id,
                 price: 13.00,
                 stock: 150
@@ -41,7 +41,7 @@ db.once('open', async () => {
             {
                 productName: 'Sleepi Roll On',
                 description: 'Roll on description',
-                productImage: 'asdasd',
+                productImage: 'https://github.com/LindseyHsiao/lunisol/blob/main/client/src/assets/alexaYoga.jpg?raw=true',
                 category: categories[0]._id,
                 price: 13.00,
                 stock: 150
