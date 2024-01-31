@@ -44,7 +44,7 @@ const [totalQuant, setTotalQuant] = useState(0)
           <Route path="/signup" element={<SignUp />} />
           <Route path="/cart" element={<Cart totalQuant={totalQuant} setTotalQuant={setTotalQuant}  />} />
           <Route path="/productentryform" element={<ProductEntryForm />} />
-          <Route path="/success" element={<Success />} />
+          <Route path="/success" element={<Success totalQuant={totalQuant} setTotalQuant={setTotalQuant}/>} />
           <Route path="/checkout" element={<Checkout />} />
           {/* <Route path="/SpatulaApp" element={<SpatulaApp />} /> */}
 

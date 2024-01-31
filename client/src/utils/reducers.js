@@ -1,13 +1,14 @@
 import {
     ADD_TO_CART,
     REMOVE_FROM_CART,
-    UPDATE_CART_QUANTITY, 
-    UPDATE_SUB_TOTAL
+    UPDATE_CART_QUANTITY,
+    UPDATE_SUB_TOTAL, 
+    EMPTY_CART
 } from './actions';
 
 const initialState = {
-    cart: JSON.parse(localStorage.getItem('cart'))||[],
-    isCartOpen: false, 
+    cart: JSON.parse(localStorage.getItem('cart')) || [],
+    isCartOpen: false,
 }
 
 
@@ -44,7 +45,7 @@ export const reducers = (state = initialState, action) => {
                 })
             }
 
-            case UPDATE_SUB_TOTAL:
+        case UPDATE_SUB_TOTAL:
 
             return {
                 ...state,
@@ -57,6 +58,14 @@ export const reducers = (state = initialState, action) => {
                     }
                     return product
                 })
+            }
+
+        case EMPTY_CART:
+            localStorage.removeItem('cart')
+            return {
+                ...state,
+                isCartOpen: true,
+                cart: []
             }
         default:
             return state

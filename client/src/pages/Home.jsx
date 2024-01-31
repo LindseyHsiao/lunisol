@@ -10,20 +10,7 @@ import { useEffect } from 'react'
 export default function Home() {
     const state = useSelector((state) => state)
 
-    // const effect = () => {
-    //     // Check to see if this is a redirect back from Checkout
-    //     const query = new URLSearchParams(window.location.search);
-      
-    //     if (query.get("success")) {
-    //        localStorage.removeItem('cart')
-    //     //    window.location.reload()
-    //     }
-      
-        
-    //   };
-      
-    //   useEffect(effect, [])
-
+   
     const { cart } = state;
 
 

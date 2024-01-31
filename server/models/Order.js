@@ -9,6 +9,7 @@ const orderSchema = new Schema(
             default: Date.now
         },
         products: [
+            // need an item schema: productname, productId, quantity ordered, price per item, 
             {
                 type: Schema.Types.ObjectId,
                 ref: 'Product'
@@ -22,7 +23,6 @@ const orderSchema = new Schema(
         firstName: {
             type: String,
             required: true,
-            // unique: true
         },
         lastName: {
             type: String,
@@ -47,7 +47,8 @@ const orderSchema = new Schema(
         zipCode: {
             type: String,
             required: true,
-        }
+        },
+        // isPaid, isShipped, totalprice
 
         
     }

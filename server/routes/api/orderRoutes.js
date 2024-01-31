@@ -3,9 +3,10 @@ const { getOneOrder, createOrder, getOrders } =  require('../../controllers/orde
 
 // const {authMiddleware} =  require('../../utils/auth')
 
-router.route('/').post(createOrder)
-router.route('/:id').get(getOneOrder)
-router.route('/').get(getOrders)
+router.route('/').post(createOrder).get(getOrders);
+
+router.route('/:id').get(getOneOrder);
+
 
 // router.route('/:id').put(updateUser)
 
