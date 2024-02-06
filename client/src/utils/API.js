@@ -89,3 +89,11 @@ export const createOrder = (data) => {
         body: JSON.stringify(data)
     })
 }
+export const getOneOrder = (id)=> {
+    return fetch(`/api/orders/${id}`, {
+        method: 'GET',
+        headers: {
+            'Content-Type': 'application/json'
+        },
+    })
+}

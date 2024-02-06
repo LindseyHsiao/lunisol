@@ -2,19 +2,44 @@
 
 const { Schema, model } = require('mongoose')
 
+
 const orderSchema = new Schema(
     {
         orderDate: {
             type: Date,
             default: Date.now
         },
-        products: [
-            // need an item schema: productname, productId, quantity ordered, price per item, 
-            {
-                type: Schema.Types.ObjectId,
-                ref: 'Product'
-            }
-        ],
+    //     products: new Schema({
+    //         productName: String,
+    //         productId: String,
+    //         quantityOrdered: Number,
+    //         pricePerItem: String
+    // }),
+        
+        // [{
+            
+                // productName: String,
+                // productId: String,
+                // quantityOrdered: Number,
+                // pricePerItem: String
+            // }],
+        // products: [
+        //     // need an item schema: productname, productId, quantity ordered, price per item, 
+        //     {
+        //         type: Schema.Types.ObjectId,
+        //         ref: 'Product'
+        //     }
+        // ],
+
+    //     Subdocument
+    // const subdocumentSchema = new mongoose.Schema({
+    //         child: new mongoose.Schema(
+    //             {
+    //                 name: String,
+    //                 age: Number
+    //             })
+    //     });
+    //     const Subdoc = mongoose.model('Subdoc', subdocumentSchema);
         email: {
             type: String,
             required: true,
@@ -50,7 +75,7 @@ const orderSchema = new Schema(
         },
         // isPaid, isShipped, totalprice
 
-        
+
     }
 );
 

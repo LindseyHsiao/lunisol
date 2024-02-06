@@ -3,6 +3,8 @@ const { getOneOrder, createOrder, getOrders } =  require('../../controllers/orde
 
 // const {authMiddleware} =  require('../../utils/auth')
 
+// /api/orders
+
 router.route('/').post(createOrder).get(getOrders);
 
 router.route('/:id').get(getOneOrder);
