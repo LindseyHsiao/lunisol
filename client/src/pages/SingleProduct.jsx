@@ -82,7 +82,7 @@ export default function SingleProduct() {
                     <div>
                         <h2>{productData.productName}</h2>
                         <p>0.35 fl oz</p>
-                        <p>Choose me for a natural pick me up. An invigorating blend of peppermint</p>
+                        <p>{productData.description}</p>
                         <p>Quantity</p>
                         <div className='quantity'>
                             <div onClick={handleClick2}><PiMinus /></div>

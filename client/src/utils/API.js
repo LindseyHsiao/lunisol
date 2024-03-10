@@ -68,6 +68,15 @@ export const getOneProduct = (id)=> {
     })
 }
 
+export const getAllProductsByCategory = (id) => {
+    return fetch(`/api/products/category/${id}`, {
+        method: 'GET',
+        headers: {
+            'Content-Type': 'application/json'
+        },
+    })
+}
+
 export const createProduct = (data) => {
     return fetch('/api/products', {
         method: 'POST',

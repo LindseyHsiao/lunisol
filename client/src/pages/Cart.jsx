@@ -87,7 +87,7 @@ export default function Cart({ setTotalQuant, totalQuant }) {
                 })
                 setTotalQuant(sum);
 
-                setPrices(totalPrice)
+                setPrices(totalPrice.toFixed(2))
             } else {
                 setTotalQuant(0)
             }
@@ -117,7 +117,7 @@ export default function Cart({ setTotalQuant, totalQuant }) {
         //     subtotal: parseFloat(totalPrice)
         // })
 
-        return '$' + totalPrice
+        return '$' + totalPrice.toFixed(2)
         // console.log(parseInt(productData[0].price) * parseInt(productData[0].purchaseQuantity));
     }
 
@@ -173,10 +173,10 @@ export default function Cart({ setTotalQuant, totalQuant }) {
                         </div>
                     ))}
                     <h3>subTotal: ${prices}</h3>
-                    <Link to='/checkout'>
+                    <Link to='/checkout'><button>
                         {/* onSubmit={checkOutStripe} */}
                         {/* <button type="submit"> */}
-                            Checkout
+                            Checkout</button>
                         {/* </button> */}
                     </Link>
                 </div>

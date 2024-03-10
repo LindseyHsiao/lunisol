@@ -9,37 +9,27 @@ const orderSchema = new Schema(
             type: Date,
             default: Date.now
         },
-    //     products: new Schema({
-    //         productName: String,
-    //         productId: String,
-    //         quantityOrdered: Number,
-    //         pricePerItem: String
-    // }),
-        
-        // [{
-            
-                // productName: String,
-                // productId: String,
-                // quantityOrdered: Number,
-                // pricePerItem: String
-            // }],
-        // products: [
-        //     // need an item schema: productname, productId, quantity ordered, price per item, 
-        //     {
-        //         type: Schema.Types.ObjectId,
-        //         ref: 'Product'
-        //     }
-        // ],
+        listItems: [
+           {
+            productName: {
+                type: String, 
+                required: true
+            },
+            productId: {
+                type: String, 
+                required: true
+            }, 
+            quantity: {
+                type: Number, 
+                required: true
+            },
+            price: {
+                type: Number, 
+                required: true
+            }
+           }
+        ],
 
-    //     Subdocument
-    // const subdocumentSchema = new mongoose.Schema({
-    //         child: new mongoose.Schema(
-    //             {
-    //                 name: String,
-    //                 age: Number
-    //             })
-    //     });
-    //     const Subdoc = mongoose.model('Subdoc', subdocumentSchema);
         email: {
             type: String,
             required: true,

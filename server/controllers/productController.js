@@ -32,6 +32,18 @@ module.exports = {
             res.status(500).json(err)
         }
     },
+
+    async getProductsByCategory(req,res){
+        try{
+            const productData =  await Product.find({'category': req.params.categoryId}).populate('category')
+            console.log(productData);
+            res.json(productData)
+
+        }catch(err){
+            console.log(err);
+            res.status(500).json(err)
+        }
+    }
     // async deleteOneProduct(req, res) {
     //     try {
     //         const oneProduct = await Product.findOneAndDelete(

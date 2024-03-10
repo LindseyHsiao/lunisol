@@ -1,6 +1,6 @@
 import promo from '../assets/promo.jpeg'
 import { Link } from 'react-router-dom'
-import { getProducts } from '../utils/API'
+import { getProducts , getAllProductsByCategory} from '../utils/API'
 import { useEffect, useState } from 'react'
 import { useDispatch, useSelector } from 'react-redux'
 import { ADD_TO_CART, UPDATE_CART_QUANTITY } from '../utils/actions'
@@ -46,7 +46,33 @@ export default function Shop() {
         getData()
     }, [])
 
- 
+    const getAllData = async () => {
+        try {
+            const response = await getProducts()
+            if (!response.ok) {
+                throw new Error('data didnt fetch')
+            }
+            const productData = await response.json()
+            setProducts(productData)
+        } catch (error) {
+            console.log(error)
+        }
+    }
+
+ const getCategoryProds = async (category) => {
+    try {
+
+        const response = await getAllProductsByCategory(category)
+                if (!response.ok) {
+                    throw new Error('data didnt fetch')
+                }
+                const productData = await response.json()
+                setProducts(productData)
+        
+    } catch (error) {
+        console.log(error);
+    }
+ }
 
 
     return (
@@ -57,10 +83,11 @@ export default function Shop() {
                 </div>
                 <div>
                     <nav className='shop-nav-options'>
-                        <p>All</p>
+                        <button type='button' onClick={()=> getAllData()}>All</button>
                         <p>Body</p>
                         <p>Face</p>
-                        <p>Seasonal</p>
+                        <p onClick={()=> getCategoryProds('6581c5348b561c9adf29ab18')}>Seasonal</p>
+                        <p onClick={()=> getCategoryProds('65ac092167fb2847b004a19a')}>Roll On</p>
                     </nav>
                 </div>
             </div>

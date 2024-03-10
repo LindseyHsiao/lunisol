@@ -29,6 +29,10 @@ const productSchema = new Schema(
         stock: {
             type: Number,
             default: 0
+        }, 
+        ingredients: {
+            type: String,
+            required: true
         }
         
     }

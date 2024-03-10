@@ -145,7 +145,7 @@ nav a {
   margin-bottom: 0;
 } */
 
-button {
+/* button {
   background-color: #AC9C4C;
   color: #F6F1DF;
   padding: 10px 24px;
@@ -155,7 +155,7 @@ button {
   font-size: 16px;
   text-align: center;
   font-family: 'Garet-Book';
-}
+} */
 
 .home-logo {
   width: 100%
@@ -733,12 +733,30 @@ input {
 }
 .checkout {
   display: flex;
-  align-items: center;
+  flex-direction: column;
+ justify-content: center;
+ align-items: center;
+ padding: 5%;
+ /* gap: 2rem; */
+ 
 }
+
 .checkout-info {
   display: flex;
   flex-direction: row;
-
+  padding: 5%;
+  /* width: 1000px; */
+  /* justify-content: center; */
+}
+.checkout-more {
+  width: 300px;
+}
+.checkout-more-details {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+  width: 80%;
+  margin-bottom: 2rem;
 }
 
 

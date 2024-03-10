@@ -125,7 +125,7 @@ p {
         padding: 5%;
     }
     .single-product-page {
-        flex-direction: column-reverse;
+        flex-direction: column;
         margin-top: 50px;
         align-items: center;
         padding: 5%;
@@ -155,7 +155,7 @@ p {
         
     }
 
-
+   
 
 
 
